@@ -1,38 +1,44 @@
-BODYALIVE MASSAGE CAIRNS & SPA — UPLOAD INSTRUCTIONS
+UPLOAD INSTRUCTIONS (GitHub + Vercel)
 
-GOAL
-- Host a static website at: https://bodyalivemassage.com/
-- index.html lives in the public/root folder.
-- All “Book” buttons point to Square booking portal.
+What you have:
+- A static site (index.html + assets). No build step. Vercel should treat it as a plain static deployment.
 
-OPTION A — SINGLE FILE (EASIEST)
-1) Upload ONLY this file to your site root:
-   - index-single-file.html
-2) Rename it on the server to:
-   - index.html
-3) Visit https://bodyalivemassage.com/ and test.
+1) GitHub (web / iPhone Safari friendly)
+- Open your repository on GitHub
+- Make sure you are on the branch Vercel deploys (usually "main")
+- Upload these files to the *repo root* (same level as README.md):
+  index.html
+  (optional) index-single-file.html
+  assets/ (folder)
+  hero-image.jpg
+  favicon.ico
+  apple-touch-icon.png
+  icon-512.png
+  robots.txt
+  sitemap.xml
+  site.webmanifest
 
-OPTION B — FULL FILE SET (RECOMMENDED)
-1) Upload ALL files and folders to your site root:
-   - index.html
-   - assets/logo-bodyalive.jpeg
-   - hero-image.jpg
-   - favicon.ico
-   - apple-touch-icon.png
-   - icon-512.png
-   - robots.txt
-   - sitemap.xml
-   - site.webmanifest
-2) Keep the folder structure EXACTLY:
-   - assets/ must stay as a folder at the same level as index.html
-3) Visit https://bodyalivemassage.com/ and test.
+2) Vercel (common reasons you see “no changes”)
+- Your Vercel project may be connected to a different repo or a different branch.
+- Your files may be in a subfolder, but Vercel is serving the repo root (or vice versa).
+- Vercel may be using a Framework preset (like Next.js) instead of “Other”.
 
-TEST CHECKLIST
-- Book buttons open Square booking portal
-- Mobile menu toggle works
-- Phone links dial correctly
-- Email link opens a mail draft
+Quick fix checklist in Vercel:
+- Project → Settings → Git
+  - Confirm the correct repo and correct branch
+- Project → Settings → Build & Output
+  - Framework Preset: set to "Other"
+  - Build Command: leave EMPTY
+  - Output Directory: leave EMPTY
+  - Install Command: leave EMPTY
+- Redeploy the latest commit (Deployments tab → Redeploy)
 
-IPHONE SAVING (FILES / ICLOUD)
-- Tap a file link in chat → Share → “Save to Files”
-- Choose “iCloud Drive” or “On My iPhone” → Save
+3) Fast visual check
+After deployment, hard refresh:
+- iPhone Safari: tap the URL bar → reload, or clear cache if it’s stubborn.
+
+If you want to verify you’re seeing this version:
+- Open page source and search for: "Therapy and spa work that feels finished"
+
+Booking link used:
+https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services

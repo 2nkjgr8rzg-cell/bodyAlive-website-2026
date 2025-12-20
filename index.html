@@ -1,426 +1,677 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>BodyAlive Massage Cairns &amp; Spa | Spa Massage &amp; Advanced Therapy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="BodyAlive Massage Cairns &amp; Spa in Cairns, QLD offers long-form spa massage and advanced therapy for health seekers who want deep relaxation or targeted change in pain, mobility, and function." />
-  <link rel="canonical" href="https://bodyalivemassage.com/" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>BodyAlive Massage Cairns &amp; Spa | Book Online</title>
+  <meta name="description" content="BodyAlive Massage Cairns & Spa. Two focused services: Spa Massage and Advanced Therapy. Book online via Square."/>
+  <meta name="theme-color" content="#0B5FFF"/>
+  <meta property="og:title" content="BodyAlive Massage Cairns & Spa"/>
+  <meta property="og:description" content="Spa Massage + Advanced Therapy. Minimum 90 minutes. Book online."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="hero-image.jpg"/>
+  <link rel="icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+  <link rel="manifest" href="site.webmanifest"/>
+  <style>
+:root{
+  --blue-700:#0B5FFF;
+  --blue-800:#0A3DCC;
+  --navy-950:#071A2B;
+  --navy-900:#0A2540;
 
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  --green-700:#16A34A;
+  --green-800:#0F7A36;
+  --mint-100:#D1FAE5;
+  --mint-200:#A7F3D0;
 
-  <meta property="og:title" content="BodyAlive Massage Cairns &amp; Spa" />
-  <meta property="og:description" content="Two clear paths: deep spa reset or high-level advanced therapy. 90-minute minimum sessions for serious health seekers." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bodyalivemassage.com/" />
-  <meta property="og:image" content="https://bodyalivemassage.com/hero-image.jpg" />
+  --yellow-400:#FBBF24;
+  --yellow-200:#FDE68A;
+  --yellow-100:#FEF3C7;
+  --yellow-900:#713F12;
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BodyAlive Massage Cairns &amp; Spa" />
-  <meta name="twitter:description" content="Long-form spa massage and advanced therapy in Cairns, QLD. Built for health seekers." />
-  <meta name="twitter:image" content="https://bodyalivemassage.com/hero-image.jpg" />
+  --red-600:#DC2626;
 
+  --bg:#F3F8FF;
+  --surface:#FFFFFF;
+  --surface-2:#F8FBFF;
+  --text:#0B1220;
+  --muted:#475569;
+  --border:#D7E2F0;
+
+  --radius:18px;
+  --radius-sm:14px;
+  --shadow:0 14px 40px rgba(2, 8, 23, .12);
+  --shadow-soft:0 10px 25px rgba(2, 8, 23, .08);
+
+  --max:1120px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text);
+  background:
+    radial-gradient(900px 450px at 20% 10%, rgba(11,95,255,.14), transparent 60%),
+    radial-gradient(900px 450px at 80% 18%, rgba(22,163,74,.12), transparent 60%),
+    radial-gradient(700px 380px at 50% 110%, rgba(251,191,36,.10), transparent 60%),
+    linear-gradient(180deg, #F7FBFF, var(--bg));
+}
+
+a{color:inherit}
+.container{max-width:var(--max); margin:0 auto; padding:0 20px}
+.section{padding:84px 0}
+.section.tinted{
+  background:
+    linear-gradient(180deg, rgba(11,95,255,.06), rgba(22,163,74,.04));
+  border-top:1px solid rgba(215,226,240,.75);
+  border-bottom:1px solid rgba(215,226,240,.75);
+}
+.section.alt{
+  background:
+    linear-gradient(180deg, rgba(22,163,74,.06), rgba(251,191,36,.05));
+  border-top:1px solid rgba(215,226,240,.75);
+  border-bottom:1px solid rgba(215,226,240,.75);
+}
+
+.topbar{
+  position:sticky; top:0; z-index:50;
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(215,226,240,.9);
+}
+.topbar .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:14px;
+  padding:12px 0;
+}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+.brand img{height:44px; width:auto; border-radius:10px; box-shadow: var(--shadow-soft)}
+.brand .name{font-weight:800; letter-spacing:.2px}
+.brand .sub{font-size:12px; color:var(--muted); margin-top:2px}
+
+.nav{
+  display:flex; align-items:center; gap:16px;
+}
+.nav a{
+  text-decoration:none;
+  font-weight:650;
+  font-size:14px;
+  color:var(--navy-900);
+  padding:10px 10px;
+  border-radius:12px;
+}
+.nav a:hover{
+  background: linear-gradient(180deg, rgba(11,95,255,.12), rgba(22,163,74,.08));
+  border:1px solid rgba(11,95,255,.18);
+  padding:9px 9px;
+}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  gap:10px;
+  border-radius:999px;
+  padding:12px 16px;
+  font-weight:800;
+  text-decoration:none;
+  border:1px solid transparent;
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+  white-space:nowrap;
+}
+.btn:active{transform: translateY(1px)}
+.btn.primary{
+  color:white;
+  background:
+    linear-gradient(135deg, var(--blue-700), var(--green-700));
+  box-shadow: 0 12px 26px rgba(11,95,255,.22);
+}
+.btn.primary:hover{filter:saturate(1.05) brightness(1.02)}
+.btn.ghost{
+  background: rgba(255,255,255,.7);
+  border-color: rgba(11,95,255,.28);
+  color: var(--navy-900);
+}
+.btn.ghost:hover{
+  background: rgba(255,255,255,.95);
+  box-shadow: var(--shadow-soft);
+}
+
+.pill{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:7px 12px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:12px;
+  border:1px solid rgba(215,226,240,.95);
+  background: rgba(255,255,255,.75);
+}
+.pill.blue{border-color: rgba(11,95,255,.25); background: rgba(11,95,255,.10); color: var(--blue-800)}
+.pill.green{border-color: rgba(22,163,74,.25); background: rgba(22,163,74,.10); color: var(--green-800)}
+.pill.yellow{border-color: rgba(251,191,36,.35); background: rgba(254,243,199,.85); color: var(--yellow-900)}
+.pill.red{border-color: rgba(220,38,38,.35); background: rgba(220,38,38,.08); color: var(--red-600)}
+
+.hero{
+  position:relative;
+  padding:92px 0 70px;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:-120px -80px -80px -80px;
+  background:
+    linear-gradient(135deg, rgba(11,95,255,.26), rgba(22,163,74,.18), rgba(251,191,36,.10)),
+    url("hero-image.jpg") center/cover no-repeat;
+  filter: saturate(1.06) contrast(1.05);
+  opacity:.98;
+}
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(7,26,43,.62), rgba(7,26,43,.66));
+}
+.hero .content{
+  position:relative;
+  color:white;
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:26px;
+  align-items:stretch;
+}
+.hero h1{
+  margin:0;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height:1.05;
+  letter-spacing:-.6px;
+}
+.hero h1 .grad{
+  background: linear-gradient(90deg, #FFFFFF, rgba(251,191,36,.95));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.hero p{
+  margin:14px 0 0;
+  font-size: 16.5px;
+  line-height:1.55;
+  color: rgba(255,255,255,.92);
+  max-width: 54ch;
+}
+.hero .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+.hero .meta{
+  margin-top:16px;
+  display:flex; flex-wrap:wrap; gap:10px;
+}
+.hero .panel{
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--radius);
+  box-shadow: 0 16px 38px rgba(0,0,0,.20);
+  padding:18px;
+}
+.panel h3{
+  margin:0 0 10px;
+  font-size:14px;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  color: rgba(255,255,255,.92);
+}
+.panel ul{
+  margin:0; padding-left:18px;
+  color: rgba(255,255,255,.90);
+  line-height:1.55;
+}
+.panel li{margin:8px 0}
+.panel .small{
+  margin-top:12px;
+  color: rgba(255,255,255,.86);
+  font-size: 13px;
+  border-top:1px solid rgba(255,255,255,.18);
+  padding-top:12px;
+}
+
+.grid{display:grid; gap:18px}
+.grid.two{grid-template-columns: repeat(2, minmax(0,1fr))}
+.grid.three{grid-template-columns: repeat(3, minmax(0,1fr))}
+
+.card{
+  background: rgba(255,255,255,.92);
+  border:1px solid rgba(215,226,240,.95);
+  border-radius: var(--radius);
+  padding:18px;
+  box-shadow: var(--shadow-soft);
+}
+.card strong{color: var(--navy-900)}
+.card h2, .card h3{margin:0 0 10px}
+.card h2{font-size: 26px; letter-spacing:-.2px}
+.card h3{font-size: 18px}
+.card p{margin:10px 0; color: var(--muted); line-height:1.6}
+.card .footer{margin-top:12px; display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+
+.card.accent-blue{border-left: 8px solid rgba(11,95,255,.9)}
+.card.accent-green{border-left: 8px solid rgba(22,163,74,.9)}
+.card.accent-yellow{border-left: 8px solid rgba(251,191,36,.9)}
+
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-weight:900;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+  font-size: 12px;
+  color: var(--navy-900);
+  padding:8px 12px;
+  border-radius:999px;
+  background: linear-gradient(180deg, rgba(11,95,255,.12), rgba(22,163,74,.08));
+  border:1px solid rgba(11,95,255,.18);
+}
+.kicker .dot{
+  width:8px; height:8px; border-radius:99px;
+  background: var(--yellow-400);
+  box-shadow: 0 0 0 4px rgba(251,191,36,.20);
+}
+
+.h2{
+  margin:0 0 14px;
+  font-size: 34px;
+  letter-spacing:-.5px;
+  color: var(--navy-950);
+}
+.h2 span{
+  background: linear-gradient(90deg, var(--blue-700), var(--green-700));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.lede{margin:0 0 22px; color: var(--muted); line-height:1.6; max-width: 70ch}
+
+.badge-row{display:flex; gap:10px; flex-wrap:wrap; margin: 8px 0 0}
+
+.callout{
+  border-radius: var(--radius);
+  padding:16px 16px;
+  border:1px solid rgba(215,226,240,.95);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.86));
+  box-shadow: var(--shadow-soft);
+}
+.callout strong{color: var(--navy-900)}
+.callout .title{
+  display:flex; align-items:center; gap:10px;
+  font-weight:900;
+  margin:0 0 6px;
+}
+.callout.yellow{border-color: rgba(251,191,36,.45); background: linear-gradient(180deg, rgba(254,243,199,.95), rgba(255,255,255,.92))}
+.callout.blue{border-color: rgba(11,95,255,.30); background: linear-gradient(180deg, rgba(11,95,255,.08), rgba(255,255,255,.92))}
+.callout.green{border-color: rgba(22,163,74,.30); background: linear-gradient(180deg, rgba(22,163,74,.08), rgba(255,255,255,.92))}
+
+.list{
+  margin:0;
+  padding-left: 18px;
+  line-height:1.7;
+  color: var(--muted);
+}
+.list li{margin:8px 0}
+.link{
+  color: var(--blue-800);
+  text-decoration: none;
+  font-weight: 800;
+}
+.link:hover{ text-decoration: underline }
+
+.footer{
+  padding:34px 0;
+  color: rgba(71,85,105,.96);
+  border-top:1px solid rgba(215,226,240,.95);
+  background:
+    linear-gradient(180deg, rgba(11,95,255,.05), rgba(22,163,74,.04));
+}
+.footer .cols{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:16px;
+}
+.smallprint{font-size: 12.5px; color: rgba(71,85,105,.92); line-height:1.55}
+.hr{height:1px; background: rgba(215,226,240,.95); margin:16px 0}
+
+.mobile-toggle{display:none}
+
+@media (max-width: 920px){
+  .hero .content{grid-template-columns:1fr}
+  .grid.two{grid-template-columns:1fr}
+  .grid.three{grid-template-columns:1fr}
+  .footer .cols{grid-template-columns:1fr}
+}
+
+@media (max-width: 720px){
+  .nav{display:none}
+  .mobile-toggle{display:inline-flex}
+  .brand img{height:40px}
+  .section{padding:64px 0}
+}
+</style>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "BodyAlive Massage Cairns & Spa",
-    "url": "https://bodyalivemassage.com/",
-    "telephone": "+61 467 467 222",
-    "email": "BodyAlivemassagenow@gmail.com",
-    "priceRange": "$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "90 Lake Street",
-      "addressLocality": "Cairns",
-      "addressRegion": "QLD",
-      "postalCode": "4870",
-      "addressCountry": "AU"
+    "@context":"https://schema.org",
+    "@type":"HealthAndBeautyBusiness",
+    "name":"BodyAlive Massage Cairns & Spa",
+    "url":"https://bodyalivemassage.com/",
+    "image":"https://bodyalivemassage.com/hero-image.jpg",
+    "telephone":"+61 467 467 222",
+    "email":"BodyAlivemassagenow@gmail.com",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"90 Lake Street",
+      "addressLocality":"Cairns",
+      "addressRegion":"QLD",
+      "postalCode":"4870",
+      "addressCountry":"AU"
     },
-    "areaServed": { "@type": "City", "name": "Cairns" },
-    "description": "Long-form spa massage and advanced therapy for health seekers who want deep relaxation or targeted change in pain, mobility, and function."
+    "sameAs":[]
   }
   </script>
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; color: #111827; background-color: #f9fafb; }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
-
-    .page { min-height: 100vh; display: flex; flex-direction: column; }
-    header { position: sticky; top: 0; z-index: 50; background-color: rgba(249, 250, 251, 0.96); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e7eb; }
-    .nav-inner { max-width: 1120px; margin: 0 auto; padding: 0.75rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
-
-    .brand { display: flex; flex-direction: column; gap: 0.1rem; }
-    .brand-logo { width: 56px; height: auto; margin-bottom: 0.35rem; }
-    .brand-title { font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.9rem; }
-    .brand-subtitle { font-size: 0.75rem; color: #6b7280; }
-
-    nav ul { list-style: none; display: flex; align-items: center; gap: 1.25rem; font-size: 0.9rem; }
-    nav a { color: #374151; font-weight: 500; }
-    nav a:hover { color: #111827; }
-
-    .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.4rem; border-radius: 999px; border: none; background-color: #111827; color: #f9fafb; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: background-color 0.15s ease, transform 0.1s ease; white-space: nowrap; }
-    .btn-primary:hover { background-color: #030712; transform: translateY(-1px); }
-    .btn-outline { display: inline-flex; align-items: center; justify-content: center; padding: 0.55rem 1.3rem; border-radius: 999px; border: 1px solid #d1d5db; background-color: transparent; color: #111827; font-weight: 500; font-size: 0.9rem; cursor: pointer; transition: background-color 0.15s ease, border-color 0.15s ease; white-space: nowrap; }
-    .btn-outline:hover { background-color: #e5e7eb; border-color: #9ca3af; }
-
-    main { flex: 1 0 auto; }
-    section { padding: 4rem 1.25rem; }
-    .section-inner { max-width: 1120px; margin: 0 auto; }
-    .section-heading { font-size: 1.9rem; margin-bottom: 0.75rem; letter-spacing: 0.02em; }
-    .section-subheading { font-size: 0.95rem; color: #6b7280; max-width: 32rem; }
-
-    .hero { padding-top: 4.5rem; padding-bottom: 4rem; }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
-    .hero-eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6b7280; margin-bottom: 0.75rem; }
-    .hero-title { font-size: 2.4rem; line-height: 1.15; margin-bottom: 0.75rem; }
-    .hero-body { font-size: 0.98rem; color: #4b5563; max-width: 32rem; margin-bottom: 1.5rem; }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 1rem; }
-    .hero-note { font-size: 0.8rem; color: #6b7280; }
-
-    .hero-panel { border-radius: 1rem; border: 1px solid #e5e7eb; background: linear-gradient(135deg, #f3f4f6, #ffffff); padding: 1.5rem 1.4rem; display: flex; flex-direction: column; gap: 1rem; }
-    .hero-panel-title { font-size: 0.95rem; font-weight: 600; }
-    .hero-panel-list { list-style: none; font-size: 0.82rem; color: #4b5563; display: grid; gap: 0.4rem; }
-    .hero-pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .pill { border-radius: 999px; padding: 0.25rem 0.7rem; font-size: 0.74rem; background-color: #e5e7eb; color: #374151; }
-
-    .split { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2.5rem; align-items: start; margin-top: 2rem; }
-    .text-muted { font-size: 0.9rem; color: #6b7280; }
-
-    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
-    .card { border-radius: 0.9rem; border: 1px solid #e5e7eb; background-color: #ffffff; padding: 1.25rem; }
-    .card-title { font-size: 0.98rem; font-weight: 600; margin-bottom: 0.25rem; }
-    .card-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em; color: #6b7280; margin-bottom: 0.4rem; }
-    .card-body { font-size: 0.9rem; color: #4b5563; }
-
-    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 2rem; }
-    .service-meta { font-size: 0.8rem; color: #6b7280; margin-bottom: 0.4rem; }
-    .service-list { list-style: disc; padding-left: 1.1rem; margin: 0.5rem 0 0.75rem; font-size: 0.88rem; color: #4b5563; }
-    .service-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 0.5rem; flex-wrap: wrap; }
-    .price-label { font-size: 0.85rem; color: #4b5563; }
-    .price-value { font-weight: 600; font-size: 0.95rem; }
-
-    .notice { border-radius: 0.9rem; border: 1px solid #f97316; background: #fffbeb; padding: 1rem 1.1rem; font-size: 0.86rem; color: #7c2d12; margin-top: 1.5rem; }
-    .notice-strong { font-weight: 600; }
-
-    .faq-list { margin-top: 2rem; display: grid; gap: 1rem; }
-    .faq-item { padding: 1rem 1.1rem; border-radius: 0.8rem; border: 1px solid #e5e7eb; background-color: #ffffff; }
-    .faq-q { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.4rem; }
-    .faq-a { font-size: 0.88rem; color: #4b5563; }
-
-    .contact-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 2rem; margin-top: 2rem; }
-    .contact-list { list-style: none; display: grid; gap: 0.4rem; font-size: 0.9rem; color: #4b5563; }
-    .contact-label { font-weight: 600; color: #111827; }
-    .contact-note { margin-top: 0.75rem; font-size: 0.84rem; color: #6b7280; }
-    .contact-box { border-radius: 0.9rem; border: 1px solid #e5e7eb; background-color: #ffffff; padding: 1.25rem 1.15rem; font-size: 0.86rem; color: #4b5563; }
-
-    footer { border-top: 1px solid #e5e7eb; background-color: #f3f4f6; padding: 1.25rem 1.25rem; font-size: 0.8rem; color: #6b7280; }
-    .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; }
-
-    .nav-toggle { display: none; border: none; background: none; cursor: pointer; padding: 0.25rem; }
-    .nav-toggle span { display: block; width: 20px; height: 2px; background-color: #111827; border-radius: 999px; margin: 4px 0; }
-
-    @media (max-width: 768px) {
-      .hero-grid, .split, .contact-grid { grid-template-columns: minmax(0, 1fr); }
-      .hero { padding-top: 3.75rem; }
-      .hero-title { font-size: 2rem; }
-      nav ul { position: absolute; top: 100%; left: 0; right: 0; background-color: #f9fafb; border-bottom: 1px solid #e5e7eb; padding: 0.75rem 1.25rem 1rem; flex-direction: column; align-items: flex-start; gap: 0.75rem; display: none; }
-      nav ul.open { display: flex; }
-      .nav-toggle { display: block; }
-    }
-    html { scroll-behavior: smooth; }
-  </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="nav-inner">
-        <div class="brand">
-          <img src="assets/logo-bodyalive.jpeg" alt="BodyAlive Massage Cairns &amp; Spa logo" class="brand-logo" />
-          <div class="brand-title">BODYALIVE MASSAGE CAIRNS &amp; SPA</div>
-          <div class="brand-subtitle">Long-form spa massage &amp; advanced therapy for health seekers</div>
+
+<header class="topbar">
+  <div class="container">
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <img src="assets/logo-bodyalive.jpeg" alt="BodyAlive logo"/>
+        <div>
+          <div class="name">BodyAlive</div>
+          <div class="sub">Massage Cairns &amp; Spa</div>
         </div>
+      </a>
 
-        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
-          <span></span><span></span><span></span>
-        </button>
+      <nav class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#difference">Spa vs Advanced</a>
+        <a href="#faq">FAQ</a>
+        <a href="#location">Location</a>
+      </nav>
 
-        <nav>
-          <ul id="nav-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#advanced">Advanced Therapy</a></li>
-            <li><a href="#spa">Spa</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Location &amp; Contact</a></li>
-            <li><a href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" class="btn-primary">Book online</a></li>
-          </ul>
-        </nav>
+      <div style="display:flex; gap:10px; align-items:center;">
+        <a class="btn ghost mobile-toggle" data-menu href="javascript:void(0)" aria-label="Menu">Menu</a>
+        <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book Online</a>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <section id="home" class="hero">
-        <div class="section-inner hero-grid">
-          <div>
-            <div class="hero-eyebrow">Cairns • 90-minute minimum sessions</div>
-            <h1 class="hero-title">Two clear paths: deep spa reset or high-level advanced therapy.</h1>
-            <p class="hero-body">
-              BodyAlive Massage Cairns &amp; Spa offers long-form sessions for health seekers who want either:
-              time to fully unwind, or targeted change in pain, mobility, function, and performance.
-              Session lengths and full pricing are managed in the online booking portal, with a
-              90-minute minimum.
-            </p>
+    <nav class="nav" data-nav data-open="false" style="display:none; padding: 0 0 12px 0;" aria-label="Mobile">
+      <a href="#services">Services</a>
+      <a href="#difference">Spa vs Advanced</a>
+      <a href="#faq">FAQ</a>
+      <a href="#location">Location</a>
+    </nav>
+  </div>
+</header>
 
-            <div class="hero-cta">
-              <a href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" class="btn-primary">Book Advanced Therapy</a>
-              <a href="#spa" class="btn-outline">Spa info &amp; waitlist</a>
-            </div>
-
-            <p class="hero-note">
-              Spa Massage (90 min+ minimum) currently fully booked until <strong>8 Jan 2026</strong>.<br />
-              Advanced Therapy (90 min minimum) appointments are available.<br />
-              Full list of session lengths and fees appears in the booking portal.
-            </p>
-          </div>
-
-          <div class="hero-panel">
-            <div>
-              <div class="hero-panel-title">Two service types</div>
-              <ul class="hero-panel-list">
-                <li><strong>Spa Massage</strong> – nervous system downshift, deep relaxation, time-out.</li>
-                <li><strong>Advanced Therapy</strong> – targeted outcomes in pain, mobility, function, performance.</li>
-              </ul>
-            </div>
-            <div>
-              <div class="hero-panel-title">Core 90-minute options (minimums)</div>
-              <ul class="hero-panel-list">
-                <li>90 min Facial Spa + Massage: <strong>from $222</strong></li>
-                <li>90 min Advanced Therapy: <strong>from $500</strong></li>
-              </ul>
-            </div>
-            <div class="hero-pill-row">
-              <span class="pill">Health seekers only</span>
-              <span class="pill">90-minute minimum</span>
-              <span class="pill">Full menu in booking portal</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services">
-        <div class="section-inner">
-          <h2 class="section-heading">Services</h2>
-          <p class="section-subheading">
-            Two clear paths: Spa Massage for relaxation and reset, Advanced Therapy for targeted change.
-            Sessions start at 90 minutes, with longer options and full pricing listed in the booking portal.
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <div class="content">
+        <div>
+          <div class="kicker"><span class="dot"></span> Two services. Clear outcomes. Online booking.</div>
+          <h1>Therapy and spa work that feels <span class="grad">finished</span>, not “kind of done”.</h1>
+          <p>
+            BodyAlive runs a tight menu: <strong>Spa Massage</strong> for reset and recovery, and
+            <strong>Advanced Therapy</strong> for targeted outcomes. Minimum <strong>90 minutes</strong> so we can actually do the work.
           </p>
 
-          <div class="service-grid">
-            <article class="card">
-              <div class="card-tag">Spa</div>
-              <h3 class="card-title">Facial Spa + Massage</h3>
-              <div class="service-meta">Minimum session length: 90 minutes • From $222</div>
-              <ul class="service-list">
-                <li>Long-form, nervous-system-focused session</li>
-                <li>Facial spa combined with full-body massage</li>
-                <li>Designed for deep unwind and reset</li>
-                <li>No rush, full session used for your time on the table</li>
-              </ul>
-              <div class="service-footer">
-                <div>
-                  <div class="price-label">Availability</div>
-                  <div class="price-value">Fully booked until 8 Jan 2026</div>
-                  <div class="price-label" style="font-size: 0.8rem; color: #6b7280;">Check portal for updated times and fees.</div>
-                </div>
-                <a href="#spa" class="btn-outline">Spa details</a>
-              </div>
-            </article>
-
-            <article class="card" id="advanced">
-              <div class="card-tag">Advanced Therapy</div>
-              <h3 class="card-title">Advanced Therapy Session</h3>
-              <div class="service-meta">Minimum session length: 90 minutes • From $500</div>
-              <ul class="service-list">
-                <li>History and goals tied directly to real-life demands</li>
-                <li>Assessment of pain, mobility, and function</li>
-                <li>Hands-on work plus targeted movement strategies</li>
-                <li>Built for people who want change, not just relief for a day</li>
-              </ul>
-              <div class="service-footer">
-                <div>
-                  <div class="price-label">Availability</div>
-                  <div class="price-value">Appointments currently available</div>
-                  <div class="price-label" style="font-size: 0.8rem; color: #6b7280;">Session lengths and fees are set inside the booking portal.</div>
-                </div>
-                <a href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" class="btn-outline">View times &amp; book</a>
-              </div>
-            </article>
+          <div class="actions">
+            <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book Online</a>
+            <a class="btn ghost" href="#services">View services</a>
           </div>
 
-          <div class="notice">
-            <span class="notice-strong">Health fund rebates:</span>
-            this practice does not process or provide health fund rebates. Sessions are based on time,
-            attention, and advanced work for health seekers who value outcomes over receipts.<br />
-            All final session lengths and fees are shown at the time of booking in the portal.
+          <div class="meta">
+            <span class="pill blue">Clinical-clean vibe (with colour)</span>
+            <span class="pill green">Minimum 90 minutes</span>
+            <span class="pill yellow">Online booking only</span>
           </div>
         </div>
-      </section>
 
-      <section id="spa">
-        <div class="section-inner">
-          <h2 class="section-heading">Spa vs Advanced Therapy</h2>
-          <p class="section-subheading">Same space, same level of care. Two different intentions: nervous system reset or targeted change.</p>
-
-          <div class="split">
-            <div>
-              <h3 class="card-title">Spa Massage</h3>
-              <p class="text-muted">
-                Spa work at BodyAlive Massage Cairns &amp; Spa is long-form and deliberate. It is for health
-                seekers who want to switch off, reduce stress load, and let their nervous system drop out of
-                fight-or-flight for a while.
-              </p>
-              <div class="stat-grid">
-                <div class="card">
-                  <div class="card-tag">Intent</div>
-                  <div class="card-title">Unwind and reset</div>
-                  <p class="card-body">Designed for deep relaxation, decompression from work, and time-out from noise. No rushed “quick 30-minute” workaround.</p>
-                </div>
-                <div class="card">
-                  <div class="card-tag">Session length</div>
-                  <div class="card-title">Minimum 90 minutes</div>
-                  <p class="card-body">Sessions start from 90 minutes. Longer options and current pricing are always kept updated inside the booking portal, so what you see there is the live menu.</p>
-                </div>
-              </div>
-              <div class="notice" style="margin-top: 1.25rem;">
-                <span class="notice-strong">Current status:</span>
-                Spa Massage and Facial Spa + Massage are fully booked until <strong>8 Jan 2026</strong>.
-                Check the booking portal for cancellations or updated availability as that date gets closer.
-              </div>
-            </div>
-
-            <div>
-              <h3 class="card-title">Advanced Therapy</h3>
-              <p class="text-muted">
-                Advanced Therapy is for health seekers who want targeted outcomes: less pain, better mobility,
-                improved function, and more capacity to work, train, and live at the level they expect from
-                themselves.
-              </p>
-              <div class="card" style="margin-top: 1rem;">
-                <div class="card-tag">What it focuses on</div>
-                <p class="card-body">
-                  <strong>Pain:</strong> calming things down while respecting load and reality.<br /><br />
-                  <strong>Mobility &amp; function:</strong> changing how joints and tissues behave in actual movement, not just on the table.<br /><br />
-                  <strong>Performance:</strong> supporting the body to handle work, training, and life without constant breakdown.
-                </p>
-              </div>
-              <div class="card" style="margin-top: 1rem;">
-                <div class="card-tag">Who it suits</div>
-                <p class="card-body">
-                  • Tradies cooked from long days on site<br />
-                  • Lifters and field athletes chasing durability, not just short-term relief<br />
-                  • Health seekers who want clear reasoning, honest feedback, and a plan that matches what their life actually demands
-                </p>
-              </div>
-              <div style="margin-top: 1rem;">
-                <a href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" class="btn-primary">View full menu &amp; book online</a>
-              </div>
-              <p class="text-muted" style="margin-top: 0.6rem;">Session lengths and fees are managed inside the booking portal. The website gives the minimums and starting points; the portal shows the live details.</p>
-            </div>
+        <aside class="panel">
+          <h3>Quick facts</h3>
+          <ul>
+            <li><strong>Spa Massage</strong> from <strong>$222</strong> (example: Facial Spa + Massage).</li>
+            <li><strong>Fully booked until 8 Jan 2026</strong> (check Square for live availability).</li>
+            <li><strong>Advanced Therapy</strong> from <strong>$500</strong> with appointments available.</li>
+            <li><strong>No health-fund rebates</strong>. Treatments focus on restoring function and easing pain with real therapeutic methods.</li>
+          </ul>
+          <div class="small">
+            Parking: nearby on-street 1-hour paid parking; central area has 2-hour free parking; multi-level car park about 200m north on Lake St.
           </div>
-        </div>
-      </section>
-
-      <section id="faq">
-        <div class="section-inner">
-          <h2 class="section-heading">FAQ</h2>
-          <p class="section-subheading">Straight answers for people who take their body seriously.</p>
-
-          <div class="faq-list">
-            <div class="faq-item">
-              <div class="faq-q">What is the difference between Spa Massage and Advanced Therapy?</div>
-              <div class="faq-a">Spa Massage is for relaxation and nervous system reset: long-form, slow, and designed for deep unwind. Advanced Therapy is for targeted outcomes in pain, mobility, function, and performance. Both start at 90 minutes, but the intent and structure of the session are different.</div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-q">Why is the minimum 90 minutes?</div>
-              <div class="faq-a">Short sessions often mean rushing and partial work. BodyAlive runs on 90-minute minimums so there is enough time to either properly unwind (Spa) or properly assess, treat, and plan (Advanced Therapy). It respects your time and the work being done.</div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-q">Do you offer health fund rebates?</div>
-              <div class="faq-a">No. Health fund rebates are not provided. The focus here is on session quality, time, and outcomes for health seekers, not on fitting into rebate categories.</div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-q">How do I book?</div>
-              <div class="faq-a">All bookings are handled online through the Square booking portal. You can view availability in real time, choose your service type, and secure your session with card details.</div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-q">What if I want a spa session but everything is booked out?</div>
-              <div class="faq-a">Spa Massage and Facial Spa + Massage are currently fully booked until 8 Jan 2026. You can check the booking portal for cancellations or new availability as that date gets closer. Advanced Therapy remains available for those who need targeted work sooner.</div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-q">What is your cancellation policy?</div>
-              <div class="faq-a">Sessions reserve a dedicated 90-minute block. Changes and cancellations must be made within the time frame specified in the booking system. Late changes or missed sessions may attract a fee to keep the schedule fair for other health seekers.</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="section-inner">
-          <h2 class="section-heading">Location &amp; Contact</h2>
-          <p class="section-subheading">BodyAlive Massage Cairns &amp; Spa operates in Cairns, QLD. Book online, arrive on time, and treat your body like it matters.</p>
-
-          <div class="contact-grid">
-            <div>
-              <ul class="contact-list">
-                <li><span class="contact-label">Location:</span> <span>90 Lake Street, Cairns QLD 4870</span></li>
-                <li><span class="contact-label">Parking &amp; access:</span> <span>Parking is available nearby. On-street parking around the clinic is typically 1-hour paid. In the central parking area there’s 2-hour free parking. For longer stays, a multi-level car park is about 200m north on Lake Street. Parking is time-limited and actively monitored.</span></li>
-                <li><span class="contact-label">Bookings:</span> <a href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">All appointments booked online via Square</a></li>
-                <li><span class="contact-label">Phone (Australia):</span> <a href="tel:0467467222">0467 467 222</a></li>
-                <li><span class="contact-label">Phone (international):</span> <a href="tel:+61467467222">+61 467 467 222</a></li>
-                <li><span class="contact-label">Email:</span> <a href="mailto:BodyAlivemassagenow@gmail.com">BodyAlivemassagenow@gmail.com</a></li>
-              </ul>
-
-              <p class="contact-note">Contact is kept simple and focused. For serious questions about your body, the most direct path is to book online and use your session time for proper assessment and treatment.</p>
-
-              <div style="margin-top: 1.25rem;">
-                <a href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" class="btn-primary">Go to booking portal</a>
-              </div>
-            </div>
-
-            <div class="contact-box">
-              <p><strong>How to get started</strong></p>
-              <p style="margin-top: 0.4rem;">
-                1. Open the booking portal and choose Spa or Advanced Therapy.<br />
-                2. Select the session length that fits, based on the live menu and fees shown there.<br />
-                3. Confirm your time and details.<br />
-                4. Arrive ready to treat your body like essential equipment, not an afterthought.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-inner">
-        <div>© <span id="year"></span> BodyAlive Massage Cairns &amp; Spa. All rights reserved.</div>
-        <div>Long-form spa massage &amp; advanced therapy for health seekers.</div>
+        </aside>
       </div>
-    </footer>
-  </div>
+    </div>
+  </section>
 
-  <script>
-    function toggleNav() {
-      var menu = document.getElementById("nav-menu");
-      if (menu.classList.contains("open")) { menu.classList.remove("open"); }
-      else { menu.classList.add("open"); }
-    }
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <section id="services" class="section tinted">
+    <div class="container">
+      <h2 class="h2">Services that stay in their <span>lane</span>.</h2>
+      <p class="lede">Two options. No confusion. The live menu, exact pricing, and availability sit in Square (because that’s what it’s good at).</p>
+
+      <div class="grid two">
+        <div class="card accent-green">
+          <div class="badge-row">
+            <span class="pill green">Spa Massage</span>
+            <span class="pill yellow">From $222</span>
+          </div>
+          <h2 style="margin-top:12px;">Spa Massage</h2>
+          <p>
+            The “reset” option. Great when you want full-body recovery, calm, and that clean, finished feeling.
+            Minimum <strong>90 minutes</strong> so it’s not rushed.
+          </p>
+          <ul class="list">
+            <li>Example: <strong>Facial Spa + Massage</strong> from <strong>$222</strong></li>
+            <li>Ideal for travel fatigue, stress, and general maintenance</li>
+            <li>Book via Square for current options</li>
+          </ul>
+          <div class="footer">
+            <span class="pill yellow">Fully booked until 8 Jan 2026</span>
+            <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Check availability</a>
+          </div>
+        </div>
+
+        <div class="card accent-blue">
+          <div class="badge-row">
+            <span class="pill blue">Advanced Therapy</span>
+            <span class="pill green">From $500</span>
+          </div>
+          <h2 style="margin-top:12px;">Advanced Therapy</h2>
+          <p>
+            Targeted outcomes. Mobility, function, pain reduction and getting you back to doing things without negotiating with your body.
+            Sessions are built for progress, not “quick fixes”.
+          </p>
+          <ul class="list">
+            <li>Minimum <strong>90 minutes</strong> (often best as <strong>90–120</strong> for complex issues)</li>
+            <li>Focused assessment + hands-on treatment</li>
+            <li>Progress-oriented plan where appropriate</li>
+          </ul>
+          <div class="footer">
+            <span class="pill green">Appointments available</span>
+            <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book Advanced Therapy</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px" class="callout yellow">
+        <div class="title">⚡ Quick note</div>
+        <div style="color:var(--yellow-900); line-height:1.6">
+          Square shows the <strong>live menu</strong>, exact service names, and current pricing. This page stays clean and consistent. Square does the admin grind.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="difference" class="section">
+    <div class="container">
+      <h2 class="h2">Spa vs Advanced: the <span>difference</span> is the goal.</h2>
+      <p class="lede">
+        Both are hands-on. One is a full reset. One is an outcome-driven treatment session. Choose based on what you want your body to do next.
+      </p>
+
+      <div class="grid three">
+        <div class="card accent-green">
+          <h3><span style="color:var(--green-800); font-weight:900">Spa Massage</span> is for…</h3>
+          <ul class="list">
+            <li>Switching off without losing quality</li>
+            <li>Travel fatigue, stress load, general recovery</li>
+            <li>Whole-body work with a calm finish</li>
+          </ul>
+        </div>
+
+        <div class="card accent-blue">
+          <h3><span style="color:var(--blue-800); font-weight:900">Advanced Therapy</span> is for…</h3>
+          <ul class="list">
+            <li>Pain patterns and movement limits</li>
+            <li>Problem-solving and measurable change</li>
+            <li>Sessions built around function, not fluff</li>
+          </ul>
+        </div>
+
+        <div class="card accent-yellow">
+          <h3><span style="color:var(--yellow-900); font-weight:900">Both</span> include…</h3>
+          <ul class="list">
+            <li>Minimum 90 minutes (no drive-by sessions)</li>
+            <li>High standards and clean, clinical presentation</li>
+            <li>Online booking via Square</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:18px" class="callout blue">
+        <div class="title">📌 No rebates</div>
+        <div style="color:var(--navy-900); line-height:1.6">
+          We don’t process or provide health-fund rebates. Treatments focus on restoring function, improving mobility, and easing pain with real therapeutic methods rather than relaxation-style massages covered by rebates.
+          If you’re after results rather than paperwork, you’re in the right place.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section alt">
+    <div class="container">
+      <h2 class="h2">FAQ, so we don’t do the same <span>conversation</span> 400 times.</h2>
+
+      <div class="grid two">
+        <div class="card accent-blue">
+          <h3>How do I book?</h3>
+          <p>Bookings and payments run through Square. It shows the live menu, pricing, and availability.</p>
+          <p><a class="link" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Open the booking page</a></p>
+        </div>
+
+        <div class="card accent-green">
+          <h3>What session length should I choose?</h3>
+          <p>Minimum is 90 minutes. For Advanced Therapy, 90–120 minutes is often the right range for complex issues.</p>
+        </div>
+
+        <div class="card accent-yellow">
+          <h3>Is this a spa massage place or therapy clinic?</h3>
+          <p>Both, with clear boundaries. Spa Massage is reset and recovery. Advanced Therapy is targeted outcomes.</p>
+        </div>
+
+        <div class="card accent-blue">
+          <h3>Do you take calls for bookings?</h3>
+          <p>Online booking keeps it fast and accurate. Phone and email are there for focused communication, not a booking back-and-forth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="section">
+    <div class="container">
+      <h2 class="h2">Location &amp; contact <span>details</span>.</h2>
+      <p class="lede">Text and email work. Booking runs through Square. Parking is time-limited and monitored, because civilisation.</p>
+
+      <div class="grid two">
+        <div class="card accent-green">
+          <h3>Address</h3>
+          <p><strong>90 Lake Street, Cairns QLD 4870</strong></p>
+          <div class="callout green" style="margin-top:12px">
+            <div class="title">🚗 Parking</div>
+            <div style="line-height:1.6">
+              Nearby on-street 1-hour paid parking; central area has 2-hour free parking; multi-level car park about 200m north on Lake Street.
+            </div>
+          </div>
+        </div>
+
+        <div class="card accent-blue">
+          <h3>Contact</h3>
+          <p>
+            <strong>Phone (AU):</strong> 0467 467 222<br/>
+            <strong>Phone (Intl):</strong> +61 467 467 222<br/>
+            <strong>Email:</strong> BodyAlivemassagenow@gmail.com
+          </p>
+          <div class="callout yellow" style="margin-top:12px">
+            <div class="title">🟡 Book online</div>
+            <div style="line-height:1.6; color:var(--yellow-900)">
+              For live availability and pricing, use Square:
+              <a class="link" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">book an appointment here</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="assets/logo-bodyalive.jpeg" alt="BodyAlive logo" style="height:44px; border-radius:12px; box-shadow: var(--shadow-soft)"/>
+          <div>
+            <div style="font-weight:900; color:var(--navy-950)">BodyAlive Massage Cairns &amp; Spa</div>
+            <div style="color:rgba(71,85,105,.96)">Two services • Minimum 90 minutes • Online booking</div>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="smallprint">
+          © <span data-year></span> BodyAlive. This site is a static info page. Bookings and payments are handled via Square.
+        </div>
+      </div>
+
+      <div>
+        <div class="smallprint" style="border-left: 6px solid rgba(11,95,255,.55); padding-left:14px; border-radius:12px;">
+          <div style="font-weight:900; color:var(--navy-950)">Quick links</div>
+          <div style="margin-top:8px; display:grid; gap:8px;">
+            <a class="link" href="#services">Services</a>
+            <a class="link" href="#difference">Spa vs Advanced</a>
+            <a class="link" href="#faq">FAQ</a>
+            <a class="link" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book on Square</a>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="callout blue">
+          <div class="title">🔵 If you want results</div>
+          <div style="line-height:1.6">
+            Advanced Therapy is built for function, mobility, and pain reduction. It’s not a 30-minute “quick rub and hope”.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const btn = document.querySelector('[data-menu]');
+  const menu = document.querySelector('[data-nav]');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', () => {
+    const open = menu.getAttribute('data-open') === 'true';
+    menu.setAttribute('data-open', String(!open));
+    menu.style.display = open ? 'none' : 'flex';
+  });
+
+  // set year
+  const y = document.querySelector('[data-year]');
+  if(y) y.textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
