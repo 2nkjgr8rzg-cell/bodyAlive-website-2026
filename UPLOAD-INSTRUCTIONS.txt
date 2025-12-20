@@ -1,0 +1,38 @@
+BODYALIVE MASSAGE CAIRNS & SPA — UPLOAD INSTRUCTIONS
+
+GOAL
+- Host a static website at: https://bodyalivemassage.com/
+- index.html lives in the public/root folder.
+- All “Book” buttons point to Square booking portal.
+
+OPTION A — SINGLE FILE (EASIEST)
+1) Upload ONLY this file to your site root:
+   - index-single-file.html
+2) Rename it on the server to:
+   - index.html
+3) Visit https://bodyalivemassage.com/ and test.
+
+OPTION B — FULL FILE SET (RECOMMENDED)
+1) Upload ALL files and folders to your site root:
+   - index.html
+   - assets/logo-bodyalive.jpeg
+   - hero-image.jpg
+   - favicon.ico
+   - apple-touch-icon.png
+   - icon-512.png
+   - robots.txt
+   - sitemap.xml
+   - site.webmanifest
+2) Keep the folder structure EXACTLY:
+   - assets/ must stay as a folder at the same level as index.html
+3) Visit https://bodyalivemassage.com/ and test.
+
+TEST CHECKLIST
+- Book buttons open Square booking portal
+- Mobile menu toggle works
+- Phone links dial correctly
+- Email link opens a mail draft
+
+IPHONE SAVING (FILES / ICLOUD)
+- Tap a file link in chat → Share → “Save to Files”
+- Choose “iCloud Drive” or “On My iPhone” → Save
