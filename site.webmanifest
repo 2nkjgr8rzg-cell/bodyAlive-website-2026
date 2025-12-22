@@ -1,15 +1,14 @@
 {
-  "name": "BodyAlive Massage Cairns",
+  "name": "BodyAlive Massage Cairns & Spa",
   "short_name": "BodyAlive",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#F5F5F4",
-  "theme_color": "#166534",
   "icons": [
     {
-      "src": "/icon-512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "theme_color": "#1F4ACC",
+  "background_color": "#F2F6FF",
+  "display": "standalone"
 }
