@@ -6,7 +6,7 @@
   --color-bg-main: #F7FAFF;         /* clinical off-white with a blue hint */
   --color-bg-card: #FFFFFF;         /* cards / sections */
   --color-border-light: #E2E8F0;    /* light borders */
-  --color-text-main: #0F172A;       /* main text */
+  --color-text-main: var(--text-blue-grey);       /* main text */
   --color-text-muted: #475569;      /* secondary text */
   --color-accent-gold: #FBBF24;     /* highlight yellow */
 
@@ -536,24 +536,47 @@ a {
 }
 
 
-/* === FORCED HEADER BUTTONS === */
-.site-header {
-  background: #f9fbfc;
+/* === NAV BUTTONS (no underlines, blood-red outline) === */
+.primary-nav {
+  gap: 10px;
 }
 
-.main-nav {
+.primary-nav a.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 1px solid var(--blood-red);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--royal-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary-nav a.nav-btn:hover,
+.primary-nav a.nav-btn:focus {
+  outline: none;
+  background: rgba(122, 12, 18, 0.06);
+}
+
+/* Header tagline: no underline, palette text */
+.site-header .tag {
+  color: var(--green-accent);
+}
+
+/* Brand splash logo (homepage) */
+.brand-splash {
+  padding: 24px 0 10px;
+}
+
+.brand-splash-inner {
   display: flex;
   justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
 }
 
-.nav-btn {
-  background: transparent;
-  border: 1px solid var(--blood-red);
-  color: var(--royal-blue-deep);
-  padding: 12px 22px;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
+.brand-splash-logo {
+  max-width: 360px;
+  width: 70%;
+  height: auto;
 }
