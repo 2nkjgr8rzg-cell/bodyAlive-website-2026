@@ -518,3 +518,19 @@ a {
 .watermark {
   opacity: 0.05;
 }
+
+
+/* === Advanced Therapy Watermark === */
+.section-watermark {
+  position: relative;
+}
+
+.section-watermark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/logos/logo-bodyalive-color-redheel-fixed.png') no-repeat center;
+  background-size: 70%;
+  opacity: 0.05;
+  pointer-events: none;
+}
