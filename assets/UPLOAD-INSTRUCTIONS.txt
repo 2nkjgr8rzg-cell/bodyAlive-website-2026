@@ -1,0 +1,51 @@
+UPLOAD INSTRUCTIONS (GitHub + Vercel)
+
+What you have:
+- index.html (single page website)
+- assets/ (styles, script, images incl. placeholders)
+- favicon.ico, apple-touch-icon.png, icon-512.png
+- robots.txt, sitemap.xml, site.webmanifest
+
+Option 1: GitHub Pages
+1) In your repo, upload ALL files/folders from this package to the root (same level as index.html).
+2) In GitHub: Settings → Pages → Build and deployment:
+   - Source: Deploy from a branch
+   - Branch: main (or master) / root
+3) Wait for Pages to publish, then open the Pages URL.
+
+Option 2: Vercel
+1) Create a new Vercel project and import your GitHub repo.
+2) Framework preset: "Other"
+3) Build command: leave empty
+4) Output directory: leave empty (Vercel will serve index.html)
+5) Deploy.
+
+Image swap (recommended):
+- Replace these placeholder images with real clinic photos:
+  assets/hero-image.jpg
+  assets/clinic-room.jpg
+  assets/movement.jpg
+  assets/rehab-space.jpg
+
+Keep filenames the same and your site updates instantly.
+Booking link used everywhere:
+https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services
+
+
+IMAGE CHECKLIST (swap placeholders with real photos, keep filenames)
+- assets/hero-image.jpg          (therapist working on client, bright treatment room)
+- assets/family-real-people.jpg  (normal people / mixed ages, casual, humane)
+- assets/hands-detail.jpg        (close-up hands, precision, not spa-style)
+- assets/movement.jpg            (therapist guiding movement / exercise)
+- assets/clinic-room.jpg         (empty bright room, clean, minimal)
+- assets/older-client.jpg        (older client moving confidently or being treated)
+
+Photo style rules:
+- Bright, daylight/clinical light; neutral backgrounds; realistic bodies.
+- Avoid spa props (candles/petals), oily soft-focus shots, neon/pink glows, or “energy” graphics.
+
+
+---
+V3 REDESIGN NOTES
+- This version restructures the entire page around: Outcomes → Advanced Therapy vs Spa → Method → Movement → Inputs → Longevity → Value → FAQ → Location.
+- Copy is clinical/professional and avoids medical cure claims while still selling the core philosophy.
