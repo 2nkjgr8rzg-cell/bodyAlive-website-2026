@@ -479,3 +479,42 @@ hr.soft {
   border-left: 6px solid rgba(22,163,74,0.65);
   background: linear-gradient(135deg, rgba(22,163,74,0.10), rgba(65,105,225,0.04));
 }
+
+
+/* === BodyAlive Advanced Update === */
+
+:root {
+  --royal-blue: #0f2a44;
+  --royal-blue-deep: #0b2236;
+  --text-blue-grey: #243845;
+  --text-blue-green: #3a5a5f;
+  --yellow-accent: #f2c94c;
+  --blood-red: #7a0c12;
+  --green-accent: #2f7f6f;
+}
+
+body {
+  color: var(--text-blue-grey);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--royal-blue-deep);
+}
+
+.small-text, .meta, .subtext {
+  color: var(--text-blue-green);
+}
+
+a {
+  color: var(--royal-blue);
+  border-bottom: 1px solid var(--blood-red);
+}
+
+.promo-pill {
+  background: var(--yellow-accent);
+  color: var(--royal-blue-deep);
+}
+
+.watermark {
+  opacity: 0.05;
+}
