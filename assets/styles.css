@@ -580,3 +580,13 @@ a {
   width: 70%;
   height: auto;
 }
+
+
+/* Accessibility: screen-reader only text */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+
+/* Hero tagline image */
+.hero-tagline{display:flex;justify-content:center;align-items:center;margin:0 auto 18px;}
+.hero-tagline-img{width:100%;max-width:860px;height:auto;display:block;}
+@media (max-width: 640px){.hero-tagline-img{max-width:980px;}}
