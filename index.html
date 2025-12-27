@@ -39,7 +39,7 @@
 <header class="site-header">
 <div class="container">
 <div class="header-inner">
-<a aria-label="BodyAlive Massage Cairns home" class="brand" href="#top">
+<a aria-label="BodyAlive Massage Cairns home" class="brand" href="#home">
 <img alt="BodyAlive logo" src="assets/logos/logo-advance-function-advanced-therapy-master.png?v=20251227a"/>
 <div>
 <div class="name">BodyAlive Massage Cairns &amp; Spa</div>
@@ -47,12 +47,10 @@
 </div>
 </a>
 <div class="nav-cta">
-<button aria-controls="primary-nav" aria-expanded="false" class="btn btn-outline mobile-toggle" data-mobile-toggle="" type="button">
-            Menu
-          </button>
+<button class="btn btn-outline mobile-toggle" id="menuToggle" type="button" aria-controls="primary-nav" aria-expanded="false">Menu</button>
 <a class="btn btn-primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" rel="noopener" target="_blank">Book Advanced Therapy</a>
 </div>
-<nav aria-label="Primary" class="primary-nav" data-primary-nav="" id="primary-nav">
+<nav aria-label="Primary" class="primary-nav" data-primary-nav=""  id="primary-nav" data-primary-nav>
 <a class="anchor-offset nav-btn" href="#advanced">Repair – Advanced Therapy</a>
 <a class="anchor-offset nav-btn" href="#spa">Pamper – Spa Sessions</a>
 <a class="anchor-offset nav-btn" href="#method">More than massage</a>
@@ -64,6 +62,11 @@
 </div>
 </header>
 
+<section id="home" class="home-splash" aria-label="Homepage">
+  <div class="home-splash-inner">
+    <img class="home-splash-logo" src="assets/logos/logo-advance-function-advanced-therapy-master.png?v=20251227a" alt="BodyAlive logo">
+  </div>
+</section>
 <section class="brand-splash" aria-label="Advance Function brand">
   <div class="container">
     <div class="brand-splash-inner">
@@ -483,30 +486,24 @@
 
 
 <script>
-(function() {
-  var btn = document.querySelector('[data-mobile-toggle]');
-  var nav = document.querySelector('[data-primary-nav]');
-  if (!btn || !nav) return;
+(function () {
+  var btn = document.getElementById('menuToggle');
+  var nav = document.getElementById('primary-nav');
 
-  function closeNav() {
-    nav.classList.remove('is-open');
-    btn.setAttribute('aria-expanded', 'false');
+  function setTopState() {
+    if (window.scrollY <= 2) document.body.classList.add('at-top');
+    else document.body.classList.remove('at-top');
   }
 
-  btn.addEventListener('click', function() {
-    var open = nav.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
+  if (btn && nav) {
+    btn.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
 
-  nav.addEventListener('click', function(e) {
-    var a = e.target.closest('a');
-    if (a) closeNav();
-  });
-
-  // Close on escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeNav();
-  });
+  window.addEventListener('scroll', setTopState, { passive: true });
+  setTopState();
 })();
 </script>
 
