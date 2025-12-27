@@ -27,9 +27,9 @@ body {
 }
 
 a { color: var(--color-teal); text-decoration: none; }
-a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:hover { text-decoration: none; }
 a:focus-visible { outline: 3px solid rgba(251,191,36,0.65); outline-offset: 3px; border-radius: 10px; }
-a.underlined { text-decoration: underline; text-underline-offset: 3px; }
+a.underlined { text-decoration: none; }
 
 .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
 
@@ -54,8 +54,9 @@ header.site-header {
   display: flex; align-items: center; gap: 12px;
   min-width: 220px;
 }
-.brand img { width: 44px; height: 44px; object-fit: contain; border-radius: 10px; background: #fff; border: 1px solid var(--color-border-light); }
-.brand .name { font-weight: 750; letter-spacing: 0.2px; }
+.brand img { width: 74px; height: 74px; object-fit: contain; border-radius: 10px; background: #fff; border: 1px solid var(--color-border-light); }
+.brand .name { font-weight: 750; letter-spacing: 0.2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
 .brand .tag { font-size: 13px; color: var(--color-text-muted); margin-top: -2px; }
 
 nav.primary-nav { display: flex; align-items: center; gap: 16px; }
@@ -65,12 +66,18 @@ nav.primary-nav a {
   padding: 10px 10px;
   border-radius: 10px;
   color: var(--color-text-main);
+
+  text-decoration: none;
+  border: 1px solid var(--color-border-light);
+  background: rgba(247, 250, 255, 0.92);
+  font-weight: 750;
 }
 nav.primary-nav a:hover {
   background: rgba(65,105,225,0.06);
   border: 1px solid rgba(65,105,225,0.28);
   color: var(--color-teal);
-  padding: 9px 9px;
+  
+  text-decoration: none;
 }
 .nav-cta { display: flex; gap: 10px; align-items: center; }
 .mobile-toggle { display: none; }
@@ -590,3 +597,10 @@ a {
 .hero-tagline{display:flex;justify-content:center;align-items:center;margin:0 auto 18px;}
 .hero-tagline-img{width:100%;max-width:860px;height:auto;display:block;}
 @media (max-width: 640px){.hero-tagline-img{max-width:980px;}}
+
+
+/* Header brand title fit */
+@media (max-width: 520px) {
+  .brand .name { font-size: 15px; }
+  .brand img { width: 64px; height: 64px; }
+}
