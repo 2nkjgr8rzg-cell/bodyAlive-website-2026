@@ -421,8 +421,8 @@
 <div>
 <h3 style="margin:0 0 8px;">Contact</h3>
 <p class="muted" style="margin:0;">
-                Email: <a class="underlined" href="mailto:BodyAlivemassagenow@gmail.com">BodyAlivemassagenow@gmail.com</a><br/>
-                Phone: <a class="underlined" href="tel:+61467467222">0467 467 222</a>
+                Email: <a href="mailto:BodyAlivemassagenow@gmail.com">BodyAlivemassagenow@gmail.com</a><br/>
+                Phone: <a href="tel:+61467467222">0467 467 222</a>
 </p>
 <div class="notice" style="margin-top: 12px;">
                 Bookings are handled online. Phone and email are for practical questions.
@@ -459,6 +459,13 @@
 <p class="small">
             © 2025 BodyAlive. All rights reserved.
           </p>
+<p class="small">
+    <strong>Scope of Practice</strong><br>
+    Advanced Therapy is a wellness-based bodywork service. It does not diagnose, treat,
+    or cure medical conditions and does not replace care from licensed medical professionals.
+    Clients are encouraged to seek medical advice for health concerns as appropriate.
+  </p>
+
 </div>
 <div>
 <div class="small"><strong style="color: var(--color-text-main);">Online booking:</strong> Square booking menu</div>
@@ -472,14 +479,36 @@
 </footer>
 <script defer="" src="assets/script.js?v=20251224e"></script>
 
-<footer>
-  <p class="small-text">
-    <strong>Scope of Practice</strong><br>
-    Advanced Therapy is a wellness-based bodywork service. It does not diagnose, treat,
-    or cure medical conditions and does not replace care from licensed medical professionals.
-    Clients are encouraged to seek medical advice for health concerns as appropriate.
-  </p>
-</footer>
+
+
+
+<script>
+(function() {
+  var btn = document.querySelector('[data-mobile-toggle]');
+  var nav = document.querySelector('[data-primary-nav]');
+  if (!btn || !nav) return;
+
+  function closeNav() {
+    nav.classList.remove('is-open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  btn.addEventListener('click', function() {
+    var open = nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  nav.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (a) closeNav();
+  });
+
+  // Close on escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeNav();
+  });
+})();
+</script>
 
 </body>
 </html>
