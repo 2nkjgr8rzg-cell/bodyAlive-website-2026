@@ -333,12 +333,14 @@ hr.soft {
 
 /* Mobile nav */
 @media (max-width: 820px) {
-  nav.primary-nav { display: none; }
-  nav.primary-nav.is-open { display: grid; grid-template-columns: 1fr; gap: 6px; padding: 10px 0 14px; }
-  .header-inner { align-items: flex-start; }
-  .nav-cta { width: 100%; justify-content: flex-end; }
+  .header-inner { align-items: flex-start; flex-wrap: wrap; }
+  .brand { width: 100%; min-width: 0; }
+  .nav-cta { width: 100%; justify-content: flex-end; margin-top: 8px; }
+  nav.primary-nav { display: none; width: 100%; }
+  nav.primary-nav.is-open { display: grid; width: 100%; grid-template-columns: 1fr; gap: 6px; padding: 10px 0 14px; }
   .mobile-toggle { display: inline-flex; }
 }
+
 
 /* --- Additions for v3 layout --- */
 .section-lead { margin: 10px 0 0; max-width: 72ch; }
