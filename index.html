@@ -3,213 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BodyAlive Massage Cairns &amp; Spa | Advance Function | Advanced Therapy</title>
-  <meta name="description" content="Treatment-focused bodywork and guided movement to support comfort, mobility and function. Advanced Therapy: 2 hours minimum. Spa sessions: 90 minutes minimum. Online booking only." />
-  <meta property="og:title" content="BodyAlive Massage Cairns &amp; Spa" />
-  <meta property="og:description" content="Treatment-focused bodywork and guided movement for pain, mobility and function. Advanced Therapy: 2 hours minimum. Spa sessions: 90 minutes minimum." />
+  <title>BodyAlive Massage Cairns | Clinical-level bodywork for pain, mobility & function</title>
+  <meta name="description" content="BodyAlive Massage Cairns: clinical-level hands-on bodywork for pain, mobility and function, plus spa sessions. Minimum 90 minutes. Online booking only." />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:title" content="BodyAlive Massage Cairns" />
+  <meta property="og:description" content="Clinical-level bodywork in a calm, humane setting. Real outcomes: less pain, better movement, more function." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/hero-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-
-  <style>
-    :root{
-      --ink:#0b1220;
-      --muted:#556070;
-      --bg:#0a0f1a;
-      --paper:#ffffff;
-      --line: rgba(20,30,50,.12);
-      --royal:#1e3a8a;      /* royal-ish blue */
-      --accent:#d32f2f;     /* small red sparks */
-      --soft:#f5f7fb;
-      --radius:18px;
-      --shadow: 0 12px 35px rgba(10,15,26,.12);
-      --max: 1100px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--ink);
-      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 65%, #ffffff 100%);
-    }
-    a{color:var(--royal); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
-    header{
-      position:sticky; top:0; z-index:50;
-      background: rgba(255,255,255,.9);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .topbar{
-      display:flex; align-items:center; gap:14px; padding:10px 0;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px; min-width: 240px;
-    }
-    .brand img{height:42px; width:auto; border-radius:10px}
-    .brand .t{display:flex; flex-direction:column}
-    .brand strong{font-size:14px; letter-spacing:.2px}
-    .brand span{font-size:12px; color:var(--muted)}
-    nav{margin-left:auto; display:flex; flex-wrap:wrap; gap:14px; align-items:center}
-    nav a{font-size:13px; color:#25324a; padding:8px 10px; border-radius:12px}
-    nav a:hover{background: var(--soft); text-decoration:none}
-    .cta{
-      margin-left:10px;
-      display:flex; gap:10px; align-items:center;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius: 999px;
-      border:1px solid var(--line);
-      background:#fff;
-      box-shadow: 0 6px 16px rgba(10,15,26,.06);
-      font-weight:600; font-size:13px;
-      white-space:nowrap;
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, var(--royal), #2446b9);
-      color:#fff; border-color: transparent;
-    }
-    .btn.primary:hover{filter:brightness(1.05); text-decoration:none}
-    .btn.ghost:hover{background:var(--soft); text-decoration:none}
-
-    .hero{
-      padding: 34px 0 18px;
-    }
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 22px;
-      align-items:stretch;
-    }
-    .card{
-      background:var(--paper);
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .heroMain{padding: 26px}
-    .kicker{
-      display:inline-flex; gap:10px; align-items:center;
-      font-weight:700; font-size:12px; letter-spacing:.14em;
-      text-transform:uppercase;
-      color: var(--royal);
-    }
-    .kicker .dot{width:8px;height:8px;border-radius:50%; background: var(--accent)}
-    h1{margin:12px 0 10px; font-size: 34px; line-height:1.1}
-    .sub{color:var(--muted); font-size:16px; max-width: 58ch}
-    .heroBadges{display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 18px}
-    .badge{
-      font-size:12px; color:#1b2a44;
-      padding:7px 10px;
-      border:1px solid var(--line);
-      border-radius: 999px;
-      background: #fff;
-    }
-    .heroActions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
-    .sideImg{
-      height:100%;
-      display:flex;
-      flex-direction:column;
-    }
-    .sideImg img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      min-height: 280px;
-    }
-    .sideNote{
-      padding:14px 16px;
-      border-top:1px solid var(--line);
-      background: linear-gradient(180deg, #fff, #fbfcff);
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    section{padding: 22px 0}
-    .sectionHead{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:18px;
-      margin-bottom: 12px;
-    }
-    h2{margin:0; font-size:26px; line-height:1.15}
-    .lead{margin:8px 0 0; color:var(--muted); max-width: 72ch}
-    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
-    .mini{
-      padding:16px;
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background: #fff;
-    }
-    .mini h3{margin:0 0 6px; font-size:16px}
-    .mini p{margin:0; color:var(--muted); font-size:13px}
-
-    .split{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:16px;
-      align-items:stretch;
-    }
-    .pad{padding: 18px}
-    .pill{
-      display:inline-flex; align-items:center;
-      padding:6px 10px;
-      border-radius: 999px;
-      border:1px solid var(--line);
-      font-size:12px;
-      color:#1b2a44;
-      background: #fff;
-      font-weight:700;
-    }
-    ul{margin:10px 0 0; padding-left: 20px}
-    li{margin:6px 0; color:var(--muted)}
-    .callout{
-      margin-top:14px;
-      padding:12px 14px;
-      background: #f7f9ff;
-      border: 1px solid rgba(30,58,138,.18);
-      border-left: 4px solid var(--royal);
-      border-radius: 14px;
-      color:#2a3958;
-      font-size: 13px;
-    }
-
-    .divider{height:1px; background: var(--line); margin: 14px 0}
-    .faq .q{font-weight:800; margin: 12px 0 6px}
-    .faq .a{margin:0; color:var(--muted)}
-
-    footer{
-      margin-top: 22px;
-      padding: 26px 0;
-      border-top:1px solid var(--line);
-      background: #fff;
-    }
-    .footGrid{display:grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items:flex-start}
-    .fine{color:var(--muted); font-size:12px; margin: 10px 0 0}
-
-    @media (max-width: 920px){
-      .heroGrid, .split, .grid3, .footGrid{grid-template-columns: 1fr}
-      nav{display:none}
-      .cta{margin-left:auto}
-      h1{font-size: 30px}
-    }
-  </style>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="assets/styles.css" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": "BodyAlive Massage Cairns & Spa",
-    "url": "https://www.bodyalivemassage.com/",
-    "image": "https://www.bodyalivemassage.com/assets/hero-image.jpg",
+    "url": "https://bodyalivemassage.com/",
+    "telephone": "+61 467 467 222",
+    "email": "BodyAlivemassagenow@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "90 Lake Street",
@@ -217,465 +32,491 @@
       "addressRegion": "QLD",
       "postalCode": "4870",
       "addressCountry": "AU"
-    },
-    "telephone": "+61 467 467 222"
+    }
   }
   </script>
 </head>
 
-<body id="top">
-<header>
-  <div class="wrap topbar">
-    <a class="brand" href="#top" aria-label="BodyAlive home">
-      <img src="assets/logo-bodyalive.jpeg" alt="BodyAlive logo" />
-      <div class="t">
-        <strong>BodyAlive Massage Cairns &amp; Spa</strong>
-        <span>Advance Function | Advanced Therapy</span>
-      </div>
-    </a>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav aria-label="Main navigation">
-      <a href="#repair">Repair – Advanced Therapy</a>
-      <a href="#restore">Restore – Spa Sessions</a>
-      <a href="#more">More than massage</a>
-      <a href="#movement">Movement</a>
-      <a href="#faq">FAQ</a>
-      <a href="#location">Location</a>
-    </nav>
-
-    <div class="cta">
-      <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">Book Advanced Therapy</a>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="heroGrid">
-      <div class="card heroMain">
-        <div class="kicker"><span class="dot"></span><span>Advance Function | Advanced Therapy</span></div>
-        <h1>Advance Function | Advanced Therapy in Cairns</h1>
-        <p class="sub">Treatment-focused bodywork and guided movement to support comfort, mobility and function. You lead. We assist.</p>
-
-        <div class="heroBadges" aria-label="Key notes">
-          <span class="badge">Advanced Therapy: 2 hours minimum</span>
-          <span class="badge">Spa: 90 minutes minimum</span>
-          <span class="badge">Online booking only</span>
-          <span class="badge">All ages: babies → older adults</span>
-        </div>
-
-        <div class="heroActions">
-          <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">Book Advance Function</a>
-          <a class="btn ghost" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">See sessions &amp; pricing</a>
-          <a class="btn ghost" href="#repair">Start with Advance Function</a>
-        </div>
-
-        <div class="callout">
-          <strong>New short session:</strong> Emergency Discomfort Relief (30 minutes) for acute musculoskeletal “stuck” states.
-          Book it when you need a rapid reset, then move into Advance Function for the full rebuild.
-        </div>
-
-        <p class="fine">
-          Scope note: We support function, mobility and recovery using hands-on methods and movement guidance.
-          We don’t provide medical diagnosis, and this is not emergency care.
-        </p>
-      </div>
-
-      <div class="card sideImg">
-        <img src="assets/hero-image.jpg" alt="Therapist working with a client in a bright, clean treatment room" />
-        <div class="sideNote">
-          Outcomes-first bodywork and movement support, delivered in a calm, hygienic environment.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT CHANGES -->
-  <section id="targets">
-    <div class="sectionHead">
-      <div>
-        <h2>Clear targets, measurable outcomes</h2>
-        <p class="lead">The focus is practical: reduce load, restore movement quality, and help your body hold the change.</p>
-      </div>
-      <a class="btn ghost" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">View sessions &amp; pricing</a>
-    </div>
-
-    <div class="grid3">
-      <div class="mini">
-        <h3>Pain &amp; tension down</h3>
-        <p>Less protective guarding, less constant background discomfort.</p>
-      </div>
-      <div class="mini">
-        <h3>Range &amp; ease up</h3>
-        <p>Better joint glide and coordination, not just “looser muscles”.</p>
-      </div>
-      <div class="mini">
-        <h3>Function returns</h3>
-        <p>Walking, bending, training and sleep become easier to sustain.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ADVANCED THERAPY -->
-  <section id="repair">
-    <div class="sectionHead">
-      <div>
-        <span class="pill">Repair focus</span>
-        <h2>Advance Function | Advanced Therapy: results-first work for pain, mobility and function</h2>
-        <p class="lead">For people who are sick of temporary relief. The aim is mechanical change: reduce load, free movement, calm irritated tissue, and restore usable function.</p>
-      </div>
-      <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">Book Advanced Therapy</a>
-    </div>
-
-    <div class="split">
-      <div class="card pad">
-        <h3 style="margin:0 0 6px">How it feels when your body starts cooperating</h3>
-        <p class="lead" style="margin-top:0">These are the internal wins people describe once pain drops, movement frees up, and the plan is clear.</p>
-
-        <div class="divider"></div>
-
-        <div class="grid3" style="grid-template-columns: repeat(2, 1fr);">
-          <div class="mini">
-            <h3>Identity</h3>
-            <p>Your body makes sense again. Better alignment + cleaner movement patterns reduce the confusion and constant compensations.</p>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="BodyAlive Massage Cairns home">
+          <img src="assets/logo-bodyalive.jpeg" alt="BodyAlive logo" />
+          <div>
+            <div class="name">BodyAlive Massage Cairns</div>
+            <div class="tag">Clinical-level bodywork + spa sessions</div>
           </div>
-          <div class="mini">
-            <h3>Certainty</h3>
-            <p>Clear direction and measurable change. Assessment → treatment → movement integration gives you a repeatable path forward.</p>
+        </a>
+
+        <div class="nav-cta">
+          <button class="btn btn-outline mobile-toggle" type="button" data-mobile-toggle aria-expanded="false" aria-controls="primary-nav">
+            Menu
+          </button>
+          <a class="btn btn-primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book now</a>
+        </div>
+
+        <nav id="primary-nav" class="primary-nav" data-primary-nav aria-label="Primary">
+          <a href="#advanced" class="anchor-offset">Advanced Therapy</a>
+          <a href="#spa" class="anchor-offset">Spa Sessions</a>
+          <a href="#method" class="anchor-offset">More than massage</a>
+          <a href="#movement" class="anchor-offset">Movement</a>
+          <a href="#faq" class="anchor-offset">FAQ</a>
+          <a href="#location" class="anchor-offset">Location</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO (Image 1) -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-wrap">
+          <div class="hero-copy">
+            <span class="kicker">Hands-on clinical repair</span>
+            <h1>Clinical-level bodywork in a calm, humane setting</h1>
+            <p class="muted section-lead">
+              Real outcomes for real people: less pain, better movement, and more usable function.
+              Clean, precise work in a bright, neutral clinic. No spa theatre.
+            </p>
+
+            <div class="pills" aria-label="Key points">
+              <span class="pill"><strong>Minimum</strong> 90 minutes</span>
+              <span class="pill"><strong>Results-first</strong> Advanced Therapy</span>
+              <span class="pill"><strong>Restorative</strong> Spa sessions</span>
+              <span class="pill"><strong>Online booking</strong> only</span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book a session</a>
+              <a class="btn btn-secondary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">View sessions & pricing</a>
+              <a class="btn btn-outline" href="#advanced">Start with Advanced Therapy</a>
+            </div>
+
+            <div class="callout" role="note">
+              <p><strong>New standalone treatment:</strong> a new technology option inside our Advanced Therapy stream. Limited introductory launch rate for a short window. Live availability and pricing are in the booking menu.</p>
+            </div>
+
+            <div class="note" style="margin-top: 14px;">
+              <strong>Scope note:</strong> We support function, mobility and recovery using hands-on methods and movement guidance.
+              We don’t provide medical diagnosis, and this is not emergency care.
+            </div>
           </div>
-          <div class="mini">
-            <h3>Security</h3>
-            <p>Movement feels safe and reliable, not fragile. Reduced load + improved control = confidence in daily tasks.</p>
-          </div>
-          <div class="mini">
-            <h3>Feel superior</h3>
-            <p>An edge you can use. Less drag in the system means better training, better recovery, stronger baseline.</p>
+
+          <div class="hero-image" aria-label="Therapist working with client in a clean clinic room">
+            <img src="assets/hero-image.jpg" alt="Therapist working on a client in a bright, clean treatment room" />
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="card pad">
-        <h3 style="margin:0 0 8px">What we do</h3>
-        <ul>
-          <li><strong>Assessment by touch:</strong> locate restrictions, overload and compensation patterns.</li>
-          <li><strong>Precise hands-on treatment:</strong> focused pressure and release where it matters.</li>
-          <li><strong>Movement integration:</strong> targeted movement to help you keep the gains.</li>
-          <li><strong>Carry-over:</strong> simple rules or exercises that protect the improvements.</li>
-        </ul>
+    <!-- QUICK PROOF / WHAT CHANGES -->
+    <section aria-label="What people come for">
+      <div class="container">
+        <div class="section-card">
+          <span class="kicker">What changes</span>
+          <h2 class="section-title">Clear targets, measurable outcomes</h2>
+          <p class="muted section-lead">
+            The focus is practical: reduce load, restore movement quality, and help your body hold the change.
+          </p>
 
-        <div class="callout">
-          <strong>Minimum session length:</strong> 2 hours. Advanced work needs enough time to assess, treat, integrate movement, and set you up to hold the gains.
+          <div class="proof" role="list">
+            <div class="stat" role="listitem">
+              <div class="k">Pain & tension down</div>
+              <div class="v">Less protective guarding, less constant background discomfort.</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="k">Range & ease up</div>
+              <div class="v">Better joint glide and coordination, not just “looser muscles”.</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="k">Function returns</div>
+              <div class="v">Walking, bending, training and sleep become easier to sustain.</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 18px;">
+            <a class="btn btn-primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">View sessions & pricing</a>
+            <a class="btn btn-outline" href="#method">See how it works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES (split, strong separation) -->
+    <section id="advanced" class="anchor-offset">
+      <div class="container">
+        <div class="split">
+
+          <div class="panel">
+            <span class="kicker">Advanced Therapy</span>
+            <h3>Results-first work for pain, mobility and function</h3>
+            <p class="muted">
+              For people who are sick of “temporary relief”.
+              The aim is mechanical change: reduce load, free movement, calm irritated tissue, and restore usable function.
+            </p>
+            <ul>
+              <li><strong>Assessment by touch:</strong> locate restrictions, overload and compensation patterns.</li>
+              <li><strong>Precise hands-on treatment:</strong> focused pressure and release where it matters.</li>
+              <li><strong>Movement integration:</strong> targeted movement to help you keep the gains.</li>
+              <li><strong>Carry-over:</strong> simple rules or exercises that protect the improvements.</li>
+            </ul>
+            <div class="notice" style="margin-top: 14px;">
+              <strong style="color: var(--color-text-main);">Minimum session length:</strong> 90 minutes.
+              Advanced work needs enough time to assess, treat, integrate movement, and set you up to hold the gains.
+            </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+              <a class="btn btn-primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book Advanced Therapy</a>
+              <a class="btn btn-outline" href="#method">More than massage</a>
+            </div>
+          </div>
+
+          <div class="panel" id="spa">
+            <span class="kicker">Spa sessions</span>
+            <h3>Restorative massage in a clean, calm space</h3>
+            <p class="muted">
+              When you want recovery and a nervous-system downshift, without the clutter and performance.
+              High-quality technique, neutral clinic setting.
+            </p>
+            <ul>
+              <li>For stress, general tension and recovery</li>
+              <li>Useful as maintenance between higher-intensity work</li>
+              <li>Minimum 90 minutes (we don’t do rushed sessions)</li>
+            </ul>
+            <div class="notice" style="margin-top: 14px;">
+              Example: <strong style="color: var(--color-text-main);">Facial Spa + Massage</strong> from $222 (90+ min).
+              Live pricing and availability are in the booking menu.
+            </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+              <a class="btn btn-primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book a Spa Session</a>
+              <a class="btn btn-outline" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">View spa menu</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE THAN MASSAGE (Image 3 hands) -->
+    <section id="method" class="anchor-offset" aria-label="More than massage">
+      <div class="container">
+        <div class="spine">
+
+          <div class="spine-item">
+            <div class="media">
+              <img src="assets/hands-detail.jpg" alt="Close-up of practitioner hands working with precision on the body" />
+            </div>
+            <div class="content">
+              <span class="kicker">More than massage</span>
+              <h3>A complete rebuild of how your body moves and functions</h3>
+              <p class="muted">
+                We don’t chase “tight muscles”. We target how your system is organised and loaded, so movement becomes easier to sustain.
+              </p>
+              <ul>
+                <li><strong>Joints & alignment:</strong> restore movement quality and reduce compression through key joints.</li>
+                <li><strong>Breathing & internal comfort:</strong> when the trunk moves better, many people feel more ease in breathing and daily comfort.</li>
+                <li><strong>Nervous system:</strong> strong but controlled work can help shift persistent “on” mode and reduce stress load.</li>
+                <li><strong>Strength & longevity:</strong> movement and home work supports recovery and resilience between sessions.</li>
+              </ul>
+              <div class="note" style="margin-top: 14px;">
+                <strong>Plain English:</strong> This work aims to change output. Walking, bending, training, sleep and daily comfort get easier when your body isn’t fighting itself.
+              </div>
+            </div>
+          </div>
+
+          <!-- ENVIRONMENT (Image 5) -->
+          <div class="spine-item">
+            <div class="content">
+              <span class="kicker">Standards</span>
+              <h3>Clean, clinical, professional</h3>
+              <p class="muted">Bright rooms, neutral backgrounds, proper hygiene. Built for treatment, not distractions.</p>
+              <ul>
+                <li>Fresh linen for every client</li>
+                <li>Sanitised surfaces and proper hand hygiene</li>
+                <li>Low-scent environment</li>
+                <li>Simple, ordered clinic rooms</li>
+              </ul>
+            </div>
+            <div class="media">
+              <img src="assets/clinic-room.jpg" alt="Bright, minimal treatment room with table and folded towels" />
+            </div>
+          </div>
+
+          <!-- WHO WE HELP (Image 2) -->
+          <div class="spine-item">
+            <div class="media">
+              <img src="assets/family-real-people.jpg" alt="Real people of mixed ages looking comfortable and well" />
+            </div>
+            <div class="content">
+              <span class="kicker">Who we help</span>
+              <h3>Normal bodies, real lives, real demands</h3>
+              <p class="muted">
+                Desk bodies, work bodies, parent bodies, training bodies. People who keep going even when their body isn’t cooperating.
+              </p>
+              <ul>
+                <li>Adults 20s–60s and beyond</li>
+                <li>Long-term “stuck” patterns</li>
+                <li>Stiffness, overload and recurrent flare-ups</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MOVEMENT (Image 4) -->
+    <section id="movement" class="anchor-offset" aria-label="Movement and exercise">
+      <div class="container">
+        <div class="section-card">
+          <span class="kicker">Movement</span>
+          <h2 class="section-title">Physical therapy, not just lying on a table</h2>
+          <p class="muted section-lead">
+            BodyAlive sessions can include targeted movement during treatment, plus simple exercises to keep improvements moving forward.
+          </p>
+
+          <div class="grid-2" style="margin-top: 18px;">
+            <div>
+              <h3 style="margin:0 0 10px;">How it’s chosen</h3>
+              <ul>
+                <li>Support the alignment and movement quality created in-session</li>
+                <li>Unwind long-standing compensations and degenerative patterns</li>
+                <li>Help you improve between visits instead of sliding backwards</li>
+              </ul>
+
+              <div class="notice" style="margin-top: 14px;">
+                Movement is selected for your pattern. Not random stretching.
+              </div>
+            </div>
+
+            <div class="hero-image" style="min-height: 320px;">
+              <img src="assets/movement.jpg" alt="Therapist guiding a client through a movement or rehab exercise" />
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 18px;">
+            <a class="btn btn-primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book a session</a>
+            <a class="btn btn-outline" href="#inputs">Lifestyle inputs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INPUTS / HABITS -->
+    <section id="inputs" class="anchor-offset" aria-label="Food and habits">
+      <div class="container">
+        <div class="section-card">
+          <span class="kicker">Lifestyle inputs</span>
+          <h2 class="section-title">Food, habits, and the quiet inputs that keep dragging you backward</h2>
+          <p class="muted section-lead">
+            Hands-on work helps. Results hold better when your daily inputs support recovery instead of fighting it.
+          </p>
+
+          <div class="grid-2" style="margin-top: 18px;">
+            <div>
+              <h3 style="margin:0 0 10px;">What we can cover (as part of some programs)</h3>
+              <ul>
+                <li>Identify common foods and products that may contribute to inflammation and poor recovery</li>
+                <li>Make simple swaps that support steadier energy and better repair</li>
+                <li>Build habits that make progress easier to maintain</li>
+              </ul>
+
+              <div class="note" style="margin-top: 14px;">
+                <strong>Not fads:</strong> this is practical education and habit support.
+                For medical nutrition needs, allergies or diagnosed conditions, work with your GP or a qualified dietitian.
+              </div>
+            </div>
+
+            <div>
+              <div class="notice">
+                <strong style="color: var(--color-text-main);">Why it matters:</strong> if the baseline inputs are inflammatory, the body keeps re-tightening and re-guarding.
+                Better inputs make results easier to hold.
+              </div>
+              <hr class="soft" />
+              <div class="notice">
+                <strong style="color: var(--color-text-main);">No lectures:</strong> the goal is a cleaner, more workable baseline you can actually stick to.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LONG-TERM (Image 6) -->
+    <section aria-label="Long-term function">
+      <div class="container">
+        <div class="spine">
+          <div class="spine-item">
+            <div class="media">
+              <img src="assets/older-client.jpg" alt="Older client moving confidently or receiving treatment in a bright clinic" />
+            </div>
+            <div class="content">
+              <span class="kicker">Longevity</span>
+              <h3>Built for long-term function and independence</h3>
+              <p class="muted">
+                This suits people rebuilding capacity. The aim is sustainable function, not short-lived relief.
+              </p>
+              <ul>
+                <li>Support joint comfort and movement quality</li>
+                <li>Reduce overload and recurring flare-ups</li>
+                <li>Maintain confidence and independence</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVESTMENT -->
+    <section aria-label="Value">
+      <div class="container">
+        <div class="section-card">
+          <span class="kicker">Value</span>
+          <h2 class="section-title">Why people call this an investment, not an expense</h2>
+          <p class="muted section-lead">
+            When your body works properly, everything gets easier. Energy, sleep, clarity, stress tolerance, and daily comfort all improve when you’re not fighting pain and restriction.
+          </p>
+
+          <div class="grid-2" style="margin-top: 18px;">
+            <div>
+              <ul>
+                <li>More usable energy and stamina</li>
+                <li>Clearer thinking (less “fog” from constant pain signals)</li>
+                <li>Higher stress tolerance and steadier sleep</li>
+                <li>Less distraction from pain and restriction</li>
+              </ul>
+            </div>
+            <div>
+              <div class="notice">
+                People spend thousands maintaining cars, tools and homes. Your body is the one system you cannot replace.
+                Investing in function and resilience pays you back daily.
+              </div>
+              <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px;">
+                <a class="btn btn-primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">View sessions & pricing</a>
+                <a class="btn btn-outline" href="#faq">FAQ</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="anchor-offset" aria-label="Frequently asked questions">
+      <div class="container">
+        <div class="section-card">
+          <span class="kicker">FAQ</span>
+          <h2 class="section-title">Straight answers</h2>
+
+          <div class="faq" style="margin-top: 14px;">
+            <details>
+              <summary>Do you take health-fund rebates?</summary>
+              <p>We don’t process or provide rebates. The focus is function, mobility and pain reduction through hands-on clinical methods.</p>
+            </details>
+
+            <details>
+              <summary>Do you do phone bookings?</summary>
+              <p>Booking is online via Square. It keeps availability accurate and sessions uninterrupted.</p>
+            </details>
+
+            <details>
+              <summary>How long are sessions?</summary>
+              <p>Minimum 90 minutes for both Advanced Therapy and Spa sessions.</p>
+            </details>
+
+            <details>
+              <summary>Is Advanced Therapy a relaxation massage?</summary>
+              <p>No. It’s results-first hands-on bodywork with movement integration when useful, aimed at improving function and mobility.</p>
+            </details>
+
+            <details>
+              <summary>Where do I see the full menu and prices?</summary>
+              <p>The live booking menu shows current session options, prices and openings. Use “View sessions & pricing”.</p>
+            </details>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="anchor-offset">
+      <div class="container">
+        <div class="section-card">
+          <span class="kicker">Location</span>
+          <h2 class="section-title">90 Lake Street, Cairns QLD 4870</h2>
+          <p class="muted">Parking is time-limited and monitored. Nearby options:</p>
+          <ul>
+            <li>On-street 1-hour paid parking nearby</li>
+            <li>Central area has 2-hour free parking</li>
+            <li>Multi-level car park about 200m north on Lake Street (best for longer stays)</li>
+          </ul>
+
+          <hr class="soft" />
+
+          <div class="grid-2" style="align-items:flex-start;">
+            <div>
+              <h3 style="margin:0 0 8px;">Contact</h3>
+              <p class="muted" style="margin:0;">
+                Email: <a class="underlined" href="mailto:BodyAlivemassagenow@gmail.com">BodyAlivemassagenow@gmail.com</a><br />
+                Phone: <a class="underlined" href="tel:+61467467222">0467 467 222</a>
+              </p>
+              <div class="notice" style="margin-top: 12px;">
+                Bookings are handled online. Phone and email are for practical questions.
+              </div>
+            </div>
+            <div>
+              <h3 style="margin:0 0 8px;">Book online</h3>
+              <p class="muted" style="margin:0 0 12px;">Live availability and pricing are in Square.</p>
+              <a class="btn btn-primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">Book now</a>
+              <div class="small" style="margin-top: 10px;">
+                Prefer to plan ahead? The booking menu is the source of truth for openings.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="min-width: unset;">
+            <img src="assets/logo-bodyalive.jpeg" alt="BodyAlive logo" />
+            <div>
+              <div class="name">BodyAlive Massage Cairns & Spa</div>
+              <div class="tag">Clinical-level bodywork + spa sessions</div>
+            </div>
+          </div>
+          <p class="small" style="margin-top: 12px;">
+            Outcomes-first hands-on bodywork and movement support, delivered in a calm, hygienic environment.
+          </p>
+          <p class="small">
+            © 2025 BodyAlive. All rights reserved.
+          </p>
         </div>
 
-        <div class="divider"></div>
-
-        <h3 style="margin:0 0 8px">Advanced Therapy options (4)</h3>
-        <ul>
-          <li><strong>Single session (2 hours)</strong></li>
-          <li><strong>3-session treatment program</strong></li>
-          <li><strong>6-session treatment program</strong></li>
-          <li><strong>9-session treatment program</strong></li>
-        </ul>
-
-        <div class="heroActions" style="margin-top:14px">
-          <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">View sessions &amp; pricing</a>
-          <a class="btn ghost" href="#more">More than massage</a>
+        <div>
+          <div class="small"><strong style="color: var(--color-text-main);">Online booking:</strong> Square booking menu</div>
+          <a class="btn btn-primary" style="margin-top: 10px;" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services" target="_blank" rel="noopener">View sessions & pricing</a>
+          <div class="small" style="margin-top: 14px;">
+            Address: 90 Lake Street, Cairns QLD 4870
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </footer>
 
-  <!-- SPA -->
-  <section id="restore">
-    <div class="sectionHead">
-      <div>
-        <span class="pill">Restore</span>
-        <h2>Restorative spa sessions in a clean, calm space</h2>
-        <p class="lead">A reset for stress, tension, fatigue and overload. Calmer nervous system, better circulation, and a cleaner, more restored baseline.</p>
-      </div>
-      <a class="btn ghost" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">View spa menu</a>
-    </div>
-
-    <div class="card pad">
-      <ul>
-        <li><strong>Stress reset:</strong> downshift tension and support steadier sleep and energy.</li>
-        <li><strong>Full-body recovery:</strong> ease tightness, improve circulation, and restore overall throughput.</li>
-        <li><strong>Facial Spa + Massage:</strong> approx. <strong>45 minutes facial work</strong>, with the remaining time for the rest of the body.</li>
-        <li><strong>Minimum 90 minutes</strong> (we don’t do rushed sessions).</li>
-      </ul>
-
-      <p class="fine" style="margin-top:10px">
-        Example: Facial Spa + Massage from $222 (90+ min). Live pricing and availability are in the booking menu.
-      </p>
-
-      <div class="heroActions" style="margin-top:10px">
-        <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">Book a Spa Session</a>
-        <a class="btn ghost" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">View spa menu</a>
-      </div>
-
-      <div class="callout" style="margin-top:14px">
-        <strong>Next:</strong> Advance Function | Advanced Therapy (results-first). Spa sessions are above under “Restore – Spa Sessions”.
-      </div>
-    </div>
-  </section>
-
-  <!-- MORE THAN MASSAGE -->
-  <section id="more">
-    <div class="sectionHead">
-      <div>
-        <h2>More than massage</h2>
-        <p class="lead">A complete rebuild of how your body moves and functions. We don’t chase “tight muscles”. We target how your system is organised and loaded, so movement becomes easier to sustain.</p>
-      </div>
-    </div>
-
-    <div class="card pad">
-      <ul>
-        <li><strong>Joints &amp; alignment:</strong> restore movement quality and reduce compression through key joints.</li>
-        <li><strong>Breathing &amp; internal comfort:</strong> when the trunk moves better, many people feel more ease in breathing and daily comfort.</li>
-        <li><strong>Nervous system:</strong> strong but controlled work can help shift persistent “on” mode and reduce stress load.</li>
-        <li><strong>Strength &amp; longevity:</strong> movement and home work supports recovery and resilience between sessions.</li>
-      </ul>
-      <div class="callout">Plain English: This work aims to change output. Walking, bending, training, sleep and daily comfort get easier when your body isn’t fighting itself.</div>
-    </div>
-  </section>
-
-  <!-- STANDARDS -->
-  <section id="standards">
-    <div class="sectionHead">
-      <div>
-        <h2>Clean, clinical, professional</h2>
-        <p class="lead">Bright rooms, neutral backgrounds, proper hygiene. Built for treatment, not distractions.</p>
-      </div>
-    </div>
-
-    <div class="grid3">
-      <div class="mini"><h3>Fresh linen</h3><p>Fresh linen for every client.</p></div>
-      <div class="mini"><h3>Hygiene</h3><p>Sanitised surfaces and proper hand hygiene.</p></div>
-      <div class="mini"><h3>Low-scent</h3><p>Low-scent environment, simple ordered rooms.</p></div>
-    </div>
-  </section>
-
-  <!-- WHO WE HELP -->
-  <section id="who">
-    <div class="sectionHead">
-      <div>
-        <h2>Normal bodies, real lives, real demands</h2>
-        <p class="lead">Desk bodies, work bodies, parent bodies, training bodies. People who keep going even when their body isn’t cooperating.</p>
-      </div>
-    </div>
-
-    <div class="card pad">
-      <ul>
-        <li><strong>All ages:</strong> babies, kids, teens, adults, older adults (everyone deserves function at any age).</li>
-        <li>Long-term “stuck” patterns, stiffness, overload and flare-ups.</li>
-        <li>Style: gentle, persuasive techniques. Strong when needed, never reckless.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- MOVEMENT -->
-  <section id="movement">
-    <div class="sectionHead">
-      <div>
-        <h2>Physical therapy, not just lying on a table</h2>
-        <p class="lead">Sessions can include targeted movement during treatment, plus simple exercises to keep improvements moving forward.</p>
-      </div>
-      <a class="btn ghost" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">Book a session</a>
-    </div>
-
-    <div class="card pad">
-      <h3 style="margin:0 0 8px">How it’s chosen</h3>
-      <ul>
-        <li>Support the alignment and movement quality created in-session.</li>
-        <li>Unwind long-standing compensations and degenerative patterns.</li>
-        <li>Help you improve between visits instead of sliding backwards.</li>
-      </ul>
-      <p class="fine">Movement is selected for your pattern. Not random stretching.</p>
-    </div>
-  </section>
-
-  <!-- LIFESTYLE INPUTS -->
-  <section id="lifestyle">
-    <div class="sectionHead">
-      <div>
-        <h2>Food, habits, and the quiet inputs that keep dragging you backward</h2>
-        <p class="lead">Hands-on work helps. Results hold better when your daily inputs support recovery instead of fighting it.</p>
-      </div>
-    </div>
-
-    <div class="card pad">
-      <h3 style="margin:0 0 8px">What we can cover (as part of some programs)</h3>
-      <ul>
-        <li>Identify common foods and products that may contribute to inflammation and poor recovery.</li>
-        <li>Make simple swaps that support steadier energy and better repair.</li>
-        <li>Build habits that make progress easier to maintain.</li>
-      </ul>
-      <p class="fine">For medical nutrition needs, allergies or diagnosed conditions, work with your GP or a qualified dietitian.</p>
-      <div class="callout">No lectures: the goal is a cleaner, more workable baseline you can actually stick to.</div>
-    </div>
-  </section>
-
-  <!-- LONGEVITY -->
-  <section id="longevity">
-    <div class="sectionHead">
-      <div>
-        <h2>Built for long-term function and independence</h2>
-        <p class="lead">This suits people rebuilding capacity. The aim is sustainable function, not short-lived relief.</p>
-      </div>
-    </div>
-
-    <div class="card pad">
-      <ul>
-        <li>Support joint comfort and movement quality.</li>
-        <li>Reduce overload and recurring flare-ups.</li>
-        <li>Maintain confidence and independence.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- VALUE -->
-  <section id="value">
-    <div class="sectionHead">
-      <div>
-        <h2>Why people call this an investment, not an expense</h2>
-        <p class="lead">When your body works properly, everything gets easier. Energy, sleep, clarity, stress tolerance and daily comfort all improve when you’re not fighting pain and restriction.</p>
-      </div>
-      <a class="btn ghost" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">View sessions &amp; pricing</a>
-    </div>
-
-    <div class="card pad">
-      <ul>
-        <li>More usable energy and stamina.</li>
-        <li>Clearer thinking (less “fog” from constant pain signals).</li>
-        <li>Higher stress tolerance and steadier sleep.</li>
-        <li>Less distraction from pain and restriction.</li>
-      </ul>
-      <p class="fine">People spend thousands maintaining cars, tools and homes. Your body is the one system you cannot replace. Investing in function and resilience pays you back daily.</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <div class="sectionHead">
-      <div>
-        <h2>Straight answers</h2>
-        <p class="lead">Direct, practical info. No fluff.</p>
-      </div>
-    </div>
-
-    <div class="card pad">
-      <div class="q">Do you take health-fund rebates?</div>
-      <p class="a">We don’t process or provide rebates. The focus is function, mobility and pain reduction through hands-on clinical methods.</p>
-
-      <div class="q">Do you work with all ages?</div>
-      <p class="a">Yes. Babies through to older adults. The work is guided by the person in front of us, with gentle, persuasive techniques and a results-first plan for function.</p>
-
-      <div class="q">Do you do phone bookings?</div>
-      <p class="a">Booking is online via Square. It keeps availability accurate and sessions uninterrupted.</p>
-
-      <div class="q">How long are sessions?</div>
-      <p class="a"><strong>Advanced Therapy:</strong> 2 hours minimum. <strong>Spa sessions:</strong> 90 minutes minimum.</p>
-
-      <div class="q">Is Advanced Therapy a relaxation massage?</div>
-      <p class="a">No. It’s results-first hands-on bodywork with movement integration when useful, aimed at improving function and mobility.</p>
-
-      <div class="q">Where do I see the full menu and prices?</div>
-      <p class="a">The live booking menu shows current session options, prices and openings. Use “View sessions &amp; pricing”.</p>
-    </div>
-  </section>
-
-  <!-- LOCATION -->
-  <section id="location">
-    <div class="sectionHead">
-      <div>
-        <h2>90 Lake Street, Cairns QLD 4870</h2>
-        <p class="lead">Parking is time-limited and monitored. Nearby options listed below.</p>
-      </div>
-    </div>
-
-    <div class="card pad">
-      <ul>
-        <li>On-street 1-hour paid parking nearby.</li>
-        <li>Central area has 2-hour free parking.</li>
-        <li>Multi-level car park about 200m north on Lake Street (best for longer stays).</li>
-      </ul>
-
-      <div class="divider"></div>
-
-      <h3 style="margin:0 0 8px">Contact</h3>
-      <p class="fine" style="margin:0 0 8px">Bookings are handled online. Phone and email are for practical questions.</p>
-      <p style="margin:0; color:var(--muted)">
-        Email: <a href="mailto:BodyAlivemassagenow@gmail.com">BodyAlivemassagenow@gmail.com</a><br/>
-        Phone: <a href="tel:+61467467222">0467 467 222</a>
-      </p>
-
-      <div class="divider"></div>
-
-      <h3 style="margin:0 0 8px">Book online</h3>
-      <p class="fine" style="margin:0 0 10px">Live availability and pricing are in Square. The booking menu is the source of truth for openings.</p>
-      <a class="btn primary" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">Book Advanced Therapy</a>
-    </div>
-  </section>
-
-  <!-- EMERGENCY RELIEF -->
-  <section id="emergency">
-    <div class="sectionHead">
-      <div>
-        <h2>Emergency Discomfort Relief (30 minutes)</h2>
-        <p class="lead">Rapid relief for acute musculoskeletal discomfort. This is not Advanced Therapy. It’s a short, targeted session to reduce pain and restore basic movement when you’re stuck.</p>
-      </div>
-      <a class="btn ghost" href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">Book Emergency Relief</a>
-    </div>
-
-    <div class="card pad">
-      <h3 style="margin:0 0 8px">Suggested approach (what the 30 minutes is for)</h3>
-      <p class="fine" style="margin-top:0">Fast triage + targeted decompression + a simple plan so the relief holds.</p>
-
-      <ol style="margin: 10px 0 0; color: var(--muted); padding-left: 20px">
-        <li><strong>Quick screen:</strong> confirm it’s musculoskeletal and safe to treat.</li>
-        <li><strong>Decompress:</strong> reduce load and calm the hot spot so movement stops fighting you.</li>
-        <li><strong>Reset pattern:</strong> restore basic joint glide and coordination in the area.</li>
-        <li><strong>Protect the change:</strong> 1–2 simple movements or positions so you don’t rebound by tonight.</li>
-      </ol>
-
-      <div class="divider"></div>
-
-      <ul>
-        <li><strong>Best for:</strong> acute strain, spasm, sudden joint restriction, painful movement patterns.</li>
-        <li><strong>Not for:</strong> unexplained severe pain, internal/systemic/organ pain, neurological red flags.</li>
-        <li><strong>Next step:</strong> if you want the full rebuild, book Advance Function | Advanced Therapy (2 hours).</li>
-      </ul>
-
-      <div class="callout">
-        <strong>Safety:</strong> If pain is unexplained, severe, worsening, or linked with fever, chest pain, new numbness/weakness,
-        loss of bladder/bowel control, or major trauma, medical assessment comes first.
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="wrap footGrid">
-    <div>
-      <strong>BodyAlive Massage Cairns &amp; Spa</strong><br/>
-      <span class="fine">Advance Function | Advanced Therapy • Restorative spa sessions</span>
-      <p class="fine">Outcomes-first hands-on bodywork and movement support, delivered in a calm, hygienic environment.</p>
-      <p class="fine">© 2025 BodyAlive. All rights reserved.</p>
-    </div>
-    <div>
-      <strong>Scope of Practice</strong>
-      <p class="fine">
-        Advanced Therapy is a wellness-based bodywork service. It does not diagnose, treat, or cure medical conditions and does not replace
-        care from licensed medical professionals. Clients are encouraged to seek medical advice for health concerns as appropriate.
-      </p>
-      <p class="fine">
-        Online booking: <a href="https://book.squareup.com/appointments/vcfi0uofiia24k/location/L0ZQEH3BQN924/services">Square booking menu</a>
-      </p>
-    </div>
-  </div>
-</footer>
+  <script src="assets/script.js" defer></script>
 </body>
 </html>
