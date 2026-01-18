@@ -1,4 +1,11 @@
-:root {
+:root{
+  --anchor-offset: 96px;
+}
+
+html{ scroll-padding-top: var(--anchor-offset); }
+section[id], div[id], .anchor-offset, #spa{ scroll-margin-top: var(--anchor-offset); }
+
+:root{
   /* Brand palette: Royal Blue + Green (primary), Yellow (highlight), Red (rare) */
   --color-primary-green: #15803D;   /* healing green */
   --color-teal: #4169E1;            /* ROYAL BLUE (primary action) */
@@ -18,11 +25,6 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-/* Anchor alignment for sticky header */
-:root { --anchor-offset: 96px; }
-html { scroll-padding-top: var(--anchor-offset); }
-.anchor-offset, #spa { scroll-margin-top: var(--anchor-offset); }
-
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -396,6 +398,9 @@ hr.soft {
 }
 .proof .stat .k { font-weight: 900; letter-spacing: -0.2px; }
 .proof .stat .v { color: var(--color-text-muted); font-size: 13px; margin-top: 4px; }
+
+.anchor-offset { scroll-margin-top: 90px; }
+
 
 /* Panels: coloured accents */
 .panel { position: relative; }
