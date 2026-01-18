@@ -1,11 +1,4 @@
-:root{
-  --anchor-offset: 96px;
-}
-
-html{ scroll-padding-top: var(--anchor-offset); }
-section[id], div[id], .anchor-offset, #spa{ scroll-margin-top: var(--anchor-offset); }
-
-:root{
+:root {
   /* Brand palette: Royal Blue + Green (primary), Yellow (highlight), Red (rare) */
   --color-primary-green: #15803D;   /* healing green */
   --color-teal: #4169E1;            /* ROYAL BLUE (primary action) */
