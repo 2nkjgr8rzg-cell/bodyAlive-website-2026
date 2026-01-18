@@ -33,6 +33,11 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+
+    /* Anchor offset so section headings land cleanly below the fixed header */
+    :root{ --anchor-offset: 96px; }
+    html{ scroll-padding-top: var(--anchor-offset); }
+    section[id], div[id]{ scroll-margin-top: var(--anchor-offset); }
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -192,11 +197,6 @@
     }
   }
   </script>
-<style>
-  :root{ --anchor-offset: 96px; }
-  html{ scroll-padding-top: var(--anchor-offset); }
-  section[id], div[id]{ scroll-margin-top: var(--anchor-offset); }
-</style>
 </head>
 <body id="top">
 
@@ -357,6 +357,132 @@
   </footer>
 
   <script>
+    // Anchor scrolling (fixed-header safe) + close menu on selection
+    // Goal: land the section heading cleanly below the fixed header across desktop + mobile.
+    function setAnchorOffset(){
+      const header = document.getElementById('siteHeader') || document.querySelector('header');
+      if(!header) return;
+      const bar = header.querySelector('.nav') || header;
+      const h = Math.round(bar.getBoundingClientRect().height);
+      // Small breathing room so the heading isn't kissing the border
+      const gap = 10;
+      document.documentElement.style.setProperty('--anchor-offset', (h + gap) + 'px');
+    }
+
+    function getAnchorOffset(){
+      const v = getComputedStyle(document.documentElement).getPropertyValue('--anchor-offset').trim();
+      const n = parseInt(v, 10);
+      return Number.isFinite(n) ? n : 0;
+    }
+
+    function resolveScrollTarget(target){
+      if(!target) return null;
+      // Prefer the nearest section heading so the user lands at the true section start.
+      let section = null;
+      if (target.closest) section = target.closest('section');
+      if (!section && target.tagName && target.tagName.toLowerCase() === 'section') section = target;
+      const scope = section || target;
+      const heading = scope.querySelector && scope.querySelector('.section-title, h1, h2, h3');
+      return heading || scope;
+    }
+
+    function scrollToHash(hash, behavior){
+      if(!hash || hash === '#') return;
+      const id = hash.charAt(0) === '#' ? hash.slice(1) : hash;
+      const target = document.getElementById(id);
+      if(!target) return;
+
+      setAnchorOffset();
+      const focusEl = resolveScrollTarget(target);
+      const offset = getAnchorOffset();
+
+      const top = focusEl.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: behavior || 'smooth' });
+
+      // Correct once after the smooth scroll, to account for layout shifts and header show/hide.
+      if((behavior || 'smooth') !== 'auto'){
+        setTimeout(() => {
+          setAnchorOffset();
+          const correctedTop = focusEl.getBoundingClientRect().top + window.pageYOffset - getAnchorOffset();
+          // Only nudge if it's meaningfully off.
+          if (Math.abs(window.scrollY - correctedTop) > 8) {
+            window.scrollTo({ top: correctedTop, behavior: 'auto' });
+          }
+        }, 380);
+        setTimeout(() => {
+          setAnchorOffset();
+          const correctedTop2 = focusEl.getBoundingClientRect().top + window.pageYOffset - getAnchorOffset();
+          if (Math.abs(window.scrollY - correctedTop2) > 8) {
+            window.scrollTo({ top: correctedTop2, behavior: 'auto' });
+          }
+        }, 700);
+      }
+    }
+
+    function closeMenuIfPresent(){
+      // Handle common patterns: class toggles, aria-expanded buttons, checkbox-driven menus,
+      // details dropdowns, and :focus-within menus that stay open until focus is cleared.
+      const header = document.getElementById('siteHeader') || document.querySelector('header');
+
+      // 1) Checkbox toggles
+      const cb = document.querySelector('input[type="checkbox"]#menuToggle, input[type="checkbox"].menu-toggle, input[type="checkbox"][id*="menu" i], input[type="checkbox"][class*="menu" i]');
+      if(cb && cb.checked) cb.checked = false;
+
+      // 2) Buttons/toggles (close any expanded toggle)
+      const toggles = Array.from(document.querySelectorAll('#menuToggle, .mobile-toggle, [data-menu-toggle], [aria-controls]'));
+      toggles.forEach(t => {
+        if(t && t.getAttribute){
+          t.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // 3) Nav containers (remove common open classes)
+      const nav = document.getElementById('primary-nav') || document.querySelector('.primary-nav,[data-primary-nav],nav.links');
+      if(nav && nav.classList){
+        nav.classList.remove('is-open','open','active','show','menu-open');
+        // Close any <details> dropdowns inside nav
+        nav.querySelectorAll && nav.querySelectorAll('details[open]').forEach(d => d.removeAttribute('open'));
+      }
+      if(header && header.classList){
+        header.classList.remove('menu-open','is-open','open');
+      }
+
+      // 4) Clear focus so CSS :focus-within menus collapse
+      if(document.activeElement && document.activeElement.blur){
+        document.activeElement.blur();
+      }
+
+      // 5) Force focus away from the header/nav so CSS :focus-within menus collapse on mobile.
+      try {
+        document.body.setAttribute('tabindex','-1');
+        document.body.focus({preventScroll:true});
+        document.body.removeAttribute('tabindex');
+      } catch(e) {}
+    }
+
+    window.addEventListener('resize', () => setAnchorOffset(), { passive:true });
+    window.addEventListener('hashchange', () => scrollToHash(location.hash, 'smooth'));
+
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if(!a) return;
+      const hash = a.getAttribute('href');
+      if(!hash || hash.length < 2) return;
+      const target = document.getElementById(hash.slice(1));
+      if(!target) return;
+      e.preventDefault();
+      closeMenuIfPresent();
+      history.pushState(null, '', hash);
+      scrollToHash(hash, 'smooth');
+    });
+
+    // Initialize anchor offset + respect deep links
+    setAnchorOffset();
+    if (location.hash && location.hash.length > 1) {
+      // Run twice to survive layout shifts (fonts/images)
+      setTimeout(() => scrollToHash(location.hash, 'auto'), 60);
+      setTimeout(() => scrollToHash(location.hash, 'auto'), 260);
+    }
     // Year
     document.getElementById('yr').textContent = new Date().getFullYear();
 
@@ -398,111 +524,5 @@
     document.addEventListener('scroll', onScroll, {passive:true});
     onScroll();
   </script>
-
-<script id="anchor-menu-fix">
-(function(){
-  const GAP = 12;
-
-  function getHeader(){
-    return document.querySelector('.site-header') || document.getElementById('siteHeader') || document.querySelector('header');
-  }
-
-  function getHeaderHeight(){
-    const h = getHeader();
-    if(!h) return 0;
-    const r = h.getBoundingClientRect();
-    return Math.ceil(r.height || 0);
-  }
-
-  function setAnchorOffsetVar(){
-    const h = getHeaderHeight();
-    const px = Math.max(0, h + GAP);
-    document.documentElement.style.setProperty('--anchor-offset', px + 'px');
-  }
-
-  function closeMenuIfOpen(){
-    // Handles several menu styles. If none exist, it quietly does nothing.
-    const btn = document.getElementById('menuToggle') || document.querySelector('.mobile-toggle,[data-menu-toggle]');
-    const nav = document.getElementById('primary-nav') || document.querySelector('.primary-nav') || document.querySelector('nav.links') || document.querySelector('nav');
-
-    // common class toggles
-    if(nav && nav.classList){
-      nav.classList.remove('is-open','open','active','show');
-    }
-    document.body.classList.remove('menu-open','nav-open','is-open');
-
-    if(btn){
-      try{ btn.setAttribute('aria-expanded','false'); }catch(e){}
-      if(btn.classList) btn.classList.remove('is-open','open','active');
-      // checkbox-based menus
-      if(btn.matches && btn.matches('input[type="checkbox"]')) btn.checked = false;
-    }
-
-    // details-based menus
-    document.querySelectorAll('details[open]').forEach(d=>{ try{ d.open = false; }catch(e){} });
-
-    // focus-within menus: drop focus
-    if(document.activeElement && (nav && nav.contains(document.activeElement))) {
-      try{ document.activeElement.blur(); }catch(e){}
-    }
-  }
-
-  function pickScrollTarget(target){
-    if(!target) return null;
-
-    // If the target itself has a visible heading, use it
-    const direct = target.querySelector && target.querySelector('.section-title, h1, h2, h3');
-    if(direct && direct.offsetParent !== null) return direct;
-
-    // If the id is on an inner wrapper, prefer the nearest section heading
-    const sec = target.closest ? target.closest('section') : null;
-    if(sec){
-      const h = sec.querySelector('.section-title, h1, h2, h3');
-      if(h && h.offsetParent !== null) return h;
-    }
-
-    return target;
-  }
-
-  function scrollToTarget(target, smooth){
-    setAnchorOffsetVar();
-    const headerH = getHeaderHeight();
-    const el = pickScrollTarget(target) || target;
-    const top = el.getBoundingClientRect().top + window.pageYOffset - headerH - GAP;
-    window.scrollTo({ top: Math.max(0, top), behavior: smooth ? 'smooth' : 'auto' });
-  }
-
-  function onAnchorClick(e){
-    const a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
-    if(!a) return;
-    const href = a.getAttribute('href') || '';
-    if(!href || href === '#' || href === '#top') return;
-
-    const target = document.querySelector(href);
-    if(!target) return;
-
-    e.preventDefault();
-    closeMenuIfOpen();
-    scrollToTarget(target, true);
-    try{ history.pushState(null,'',href); }catch(err){ location.hash = href; }
-
-    // one extra correction after layout settles
-    setTimeout(()=>{ scrollToTarget(target, false); }, 250);
-  }
-
-  // Keep anchor offset synced to header size changes
-  window.addEventListener('resize', setAnchorOffsetVar, { passive:true });
-  window.addEventListener('load', () => {
-    setAnchorOffsetVar();
-    if(location.hash){
-      const t = document.querySelector(location.hash);
-      if(t) setTimeout(()=>scrollToTarget(t,false), 50);
-    }
-  });
-
-  document.addEventListener('click', onAnchorClick, false);
-})();
-</script>
-
 </body>
 </html>
